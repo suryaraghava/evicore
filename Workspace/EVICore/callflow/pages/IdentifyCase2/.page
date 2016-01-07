@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@21347346:1451650149640" name="IdentifyCase2" version="6.0.1">
+<element height="46" id="Element@20873989:1451650149640" name="IdentifyCase2" type="Page Entry" width="121" x="300" y="30">
+<exit_states>
+<exit_state name="next" target="Element@2697554:1451666085202"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2697554:1451666085202" name="SetValuesToSession_02" src="com.evi.main.elements.SetValuesToSession" type="Action Element" width="170" x="313" y="165">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@22864226:1451756030600" name="CheckConfidenceLevel_01" src="com.evi.main.elements.CheckConfidenceLevel" type="Decision Element" width="188" x="360" y="335">
+<exit_states>
+<exit_state name="highConfidence"/>
+<exit_state name="lowConfidence"/>
+<exit_state name="error"/>
+</exit_states>
+</element>
+</page>

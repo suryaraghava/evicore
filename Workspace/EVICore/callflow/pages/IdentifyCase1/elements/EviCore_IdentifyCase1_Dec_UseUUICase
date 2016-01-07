@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@14805406:1451652497298" name="EviCore_IdentifyCase1_Dec_UseUUICase" version="6.0.1">
+<config>
+<settings>
+<setting name="SessionValue">UseUUICase</setting>
+<setting name="comparevalue1">TRUE</setting>
+<setting name="comparevalue2">FALSE</setting>
+</settings>
+</config>
+</decision_element>

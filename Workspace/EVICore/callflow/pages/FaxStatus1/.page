@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@19790804:1451650458734" name="FaxStatus1" version="6.0.1">
+<element height="46" id="Element@32517988:1451650458734" name="FaxStatus1" type="Page Entry" width="105" x="300" y="30">
+<exit_states>
+<exit_state name="next"/>
+</exit_states>
+</element>
+</page>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@18460987:1451651569980" name="EviCore_Main1_Dec_FaxOnlyMode" version="6.0.1">
+<config>
+<settings>
+<setting name="SessionValue">FaxOnlyMode</setting>
+<setting name="comparevalue1">Yes</setting>
+<setting name="comparevalue2">No</setting>
+</settings>
+</config>
+</decision_element>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!-- ************************************************************
+        Copyright C 1995-2014 by Nuance Communications. All rights reserved.
+        Nuance Communications provides this document without representation or
+        warranty of any kind. Nuance Communications reserves the right to revise this
+        document and to change the information contained in this document without
+        further notice.
+
+        Generated from 
+   -->
+
+  <grammar  version="1.0" xml:lang="en-us" xmlns="http://www.w3.org/2001/06/grammar" tag-format="swi-semantics/1.0" root="MAIN" >
+
+    <meta name="swirec_compile_parser" content="1"/>
+
+    <rule id="MAIN" scope="public">
+    <one-of>
+        <item>
+          <ruleref uri="#vocab"/><tag>
+            if (SWI_vars.disallow) {
+              var disallow_arr = SWI_vars.disallow.split('^');
+              disallowList = SWI_vars.disallow;
+              for (var i=0; i &lt; disallow_arr.length; i++) {
+                if (vocab.SWI_meaning == disallow_arr[i]) {
+                  SWI_disallow=1;
+                  break;
+                }
+              }
+             }
+           if(vocab.SWI_meaning) {SWI_meaning=vocab.SWI_meaning};
+           dm_root=vocab.SWI_meaning;
+           grammar_version='20140819';
+           MEANING=SWI_meaning;
+		   out=MEANING;
+         </tag>
+        </item>
+		
+      </one-of>
+    </rule>
+
+    <rule id="vocab" scope="private">
+     <one-of>
+        <item>
+         <one-of>
+			<item>
+                <tag>SWI_meaning='authorization';  </tag>
+				<one-of>
+					<item> authorization number </item> 
+				</one-of>
+            </item>
+            
+         </one-of>
+        </item>
+     </one-of>
+    </rule>
+</grammar>

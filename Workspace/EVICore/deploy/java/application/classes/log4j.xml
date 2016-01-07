@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<param name="Threshold" value="INFO"/>
+		<param name="Target" value="System.out"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%5p %m%n"/>
+		</layout>
+	</appender>
+
+	<appender name="FILE" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="/Cisco/CVP/VXMLServer/logs/evicore_ivrlogs/evicore.log" />
+		<param name="MaxFileSize" value="1000KB" />
+		<param name="MaxBackupIndex" value="30" />
+		
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{DATE} [%5p] [%c{1}] - [%X{SESSION_ID}] %m%n" />
+		</layout>
+	</appender>
+
+	<category name="com.evi.main">
+		<priority value="DEBUG"/>
+		<appender-ref ref="FILE" />
+	</category>
+	
+	<root>
+		<priority value="INFO" />
+		<appender-ref ref="CONSOLE" />
+	</root>
+
+</log4j:configuration>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@3715122:1451650289541" name="ReadStatus4" version="6.0.1">
+<element height="46" id="Element@28815639:1451650289541" name="ReadStatus4" type="Page Entry" width="114" x="300" y="30">
+<exit_states>
+<exit_state name="next"/>
+</exit_states>
+</element>
+</page>

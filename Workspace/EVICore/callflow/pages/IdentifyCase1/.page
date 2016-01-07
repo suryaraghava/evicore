@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@5685187:1451650127846" name="IdentifyCase1" version="6.0.1">
+<element height="46" id="Element@21474513:1451650127846" name="IdentifyCase1" type="Page Entry" width="121" x="300" y="30">
+<exit_states>
+<exit_state name="next" target="Element@14805406:1451652497298"/>
+</exit_states>
+</element>
+<element height="46" id="Element@14805406:1451652497298" name="EviCore_IdentifyCase1_Dec_UseUUICase" src="com.evi.main.elements.DecisionWith2Exits" type="Decision Element" width="259" x="247" y="178">
+<exit_states>
+<exit_state name="comparevalue1" target="Element@33112162:1451652620026"/>
+<exit_state name="comparevalue2" target="Element@23032534:1451652579229"/>
+<exit_state name="novalue"/>
+<exit_state name="error"/>
+</exit_states>
+</element>
+<element height="46" id="Element@23032534:1451652579229" name="IdentifyCase2" type="Page Connector" width="121" x="352" y="349">
+<page_connector target="Element@20873989:1451650149640">IdentifyCase2<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@33112162:1451652620026" name="SetValuesToSession_01" src="com.evi.main.elements.SetValuesToSession" type="Action Element" width="170" x="648" y="213">
+<exit_states>
+<exit_state name="done" target="Element@10334424:1451652635138"/>
+</exit_states>
+</element>
+<element height="46" id="Element@10334424:1451652635138" name="VerifyCaller1" type="Page Connector" width="116" x="749" y="331">
+<page_connector target="Element@1415872:1451650225760">VerifyCaller1<config/>
+</page_connector>
+</element>
+</page>

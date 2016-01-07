@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@26862018:1451651801521" name="EviCore_Main1_Audio_CaseStatus" version="6.0.1">
+<config>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="1001" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1001.wav"><![CDATA[Case Status]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

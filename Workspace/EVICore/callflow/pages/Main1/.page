@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@13773450:1451650108059" name="Main1" version="6.0.1">
+<element height="46" id="Element@31912826:1451650108059" name="Main1" type="Page Entry" width="83" x="300" y="30">
+<exit_states>
+<exit_state name="next" target="Element@18460987:1451651569980"/>
+</exit_states>
+</element>
+<element height="46" id="Element@18460987:1451651569980" name="EviCore_Main1_Dec_FaxOnlyMode" src="com.evi.main.elements.DecisionWith2Exits" type="Decision Element" width="231" x="227" y="170">
+<exit_states>
+<exit_state name="comparevalue1" target="Element@26862018:1451651801521"/>
+<exit_state name="comparevalue2" target="Element@31976412:1451651802862"/>
+<exit_state name="novalue"/>
+<exit_state name="error"/>
+</exit_states>
+</element>
+<element height="46" id="Element@26862018:1451651801521" name="EviCore_Main1_Audio_CaseStatus" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="227" x="223" y="301">
+<exit_states>
+<exit_state name="done" target="Element@1679599:1451652363179"/>
+</exit_states>
+</element>
+<element height="46" id="Element@31976412:1451651802862" name="EviCore_Main1_Audio_FaxStatus" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="219" x="255" y="400">
+<exit_states>
+<exit_state name="done" target="Element@1679599:1451652363179"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1679599:1451652363179" name="EviCore_Main1_Action_setIDCaseCtr" src="com.evi.main.elements.SetValuesToSession" type="Action Element" width="240" x="259" y="485">
+<exit_states>
+<exit_state name="done" target="Element@12128726:1451652482566"/>
+</exit_states>
+</element>
+<element height="46" id="Element@12128726:1451652482566" name="IdentifyCase1" type="Page Connector" width="121" x="313" y="579">
+<page_connector target="Element@21474513:1451650127846">IdentifyCase1<config/>
+</page_connector>
+</element>
+</page>

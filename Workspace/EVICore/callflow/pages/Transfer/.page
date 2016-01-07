@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@29630597:1451650491260" name="Transfer" version="6.0.1">
+<element height="46" id="Element@20132617:1451650491260" name="Transfer" type="Page Entry" width="93" x="300" y="30">
+<exit_states>
+<exit_state name="next"/>
+</exit_states>
+</element>
+</page>

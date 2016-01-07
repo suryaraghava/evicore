@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@2607236:1451619193125" name="CallStart" version="6.0.1">
+<element height="46" id="Element@22143115:1451619193115" name="Start Of Call" start_of_call="true" type="Page Entry" width="113" x="230" y="30">
+<exit_states>
+<exit_state name="next" target="Element@26763969:1451664592045"/>
+</exit_states>
+</element>
+<element height="46" id="Element@29323024:1451650786374" name="Main1" type="Page Connector" width="83" x="257" y="277">
+<page_connector target="Element@31912826:1451650108059">Main1<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@26763969:1451664592045" name="CVP Subdialog Start_01" src="com.audium.server.voiceElement.internal.CiscoSubdialogStartElement" type="Subdialog Start" width="172" x="119" y="127">
+<exit_states>
+<exit_state name="done" target="Element@29323024:1451650786374"/>
+</exit_states>
+</element>
+</page>

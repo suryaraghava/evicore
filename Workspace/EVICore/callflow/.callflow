@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<callflow id="Callflow@27528643:1451619193125" version="6.0.1">
+<page closed="false" id="Page@2607236:1451619193125">CallStart</page>
+<page closed="false" id="Page@13773450:1451650108059">Main1</page>
+<page closed="false" id="Page@28013106:1451650120135">Main2</page>
+<page closed="false" id="Page@5685187:1451650127846">IdentifyCase1</page>
+<page closed="false" id="Page@21347346:1451650149640">IdentifyCase2</page>
+<page closed="false" id="Page@29387302:1451650167364">IdentifyCase3</page>
+<page closed="false" id="Page@2679327:1451650225760">VerifyCaller1</page>
+<page closed="false" id="Page@18900648:1451650242314">VerifyCaller2</page>
+<page closed="false" id="Page@4409387:1451650254876">ReadStatus1</page>
+<page closed="false" id="Page@13648098:1451650260035">ReadStatus2</page>
+<page closed="false" id="Page@21840676:1451650277705">ReadStatus3</page>
+<page closed="false" id="Page@3715122:1451650289541">ReadStatus4</page>
+<page closed="false" id="Page@7797881:1451650300055">ReadStatus5</page>
+<page closed="false" id="Page@1033721:1451650306644">ReadStatus6</page>
+<page closed="false" id="Page@32333800:1451650348940">ReadStatus7</page>
+<page closed="false" id="Page@29550610:1451650366559">ReadStatus8</page>
+<page closed="false" id="Page@14217387:1451650384604">ReadStatus9</page>
+<page closed="false" id="Page@19790804:1451650458734">FaxStatus1</page>
+<page closed="false" id="Page@31566073:1451650469561">FaxStatus2</page>
+<page closed="false" id="Page@22529209:1451650479165">FaxStatus3</page>
+<page closed="false" id="Page@29630597:1451650491260">Transfer</page>
+</callflow>
