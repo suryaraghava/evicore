@@ -36,7 +36,7 @@ public class SetValuesToSession extends ActionElementBase implements ElementInte
 	}
 	
 	public String getDisplayFolderName(){
-		return "Santosh";
+		return "Evicore";
 	}
 	
 	public String getDescription(){

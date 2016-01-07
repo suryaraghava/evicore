@@ -59,7 +59,7 @@ public class DecisionWith3Exits extends DecisionElementBase implements ElementIn
 	}
 	
 	public String getDisplayFolderName(){
-		return "Santosh";
+		return "Evicore";
 	}
 	
 	public String getDescription(){

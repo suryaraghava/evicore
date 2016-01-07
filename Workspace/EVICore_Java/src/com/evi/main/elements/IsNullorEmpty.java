@@ -36,7 +36,7 @@ public class IsNullorEmpty extends DecisionElementBase implements ElementInterfa
 	}
 
 	public String getDisplayFolderName(){
-		return "Santosh";
+		return "Evicore";
 	}
 
 	public String getDescription(){
