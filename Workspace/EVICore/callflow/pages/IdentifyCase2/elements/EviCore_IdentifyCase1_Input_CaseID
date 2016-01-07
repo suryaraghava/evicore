@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<voice_element id="Element@8873478:1452193722429" name="InputElement_01" version="6.0.1">
+<voice_element id="Element@8873478:1452193722429" name="EviCore_IdentifyCase1_Input_CaseID" version="6.0.1">
 <config>
 <settings>
 <setting name="inputType">both</setting>

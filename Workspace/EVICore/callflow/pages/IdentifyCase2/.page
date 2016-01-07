@@ -5,13 +5,13 @@
 <exit_state name="next" target="Element@8873478:1452193722429"/>
 </exit_states>
 </element>
-<element height="46" id="Element@8873478:1452193722429" name="InputElement_01" src="com.evi.main.elements.InputElement" type="Voice Element" width="138" x="301" y="193">
+<element height="46" id="Element@8873478:1452193722429" name="EviCore_IdentifyCase1_Input_CaseID" src="com.evi.main.elements.InputElement" type="Voice Element" width="240" x="301" y="193">
 <exit_states>
 <exit_state name="optionX" target="Element@2213401:1452194596455"/>
 <exit_state name="maxError"/>
 </exit_states>
 </element>
-<element height="46" id="Element@2213401:1452194596455" name="ISEqual_01" src="com.evi.main.elements.IsEqual" type="Decision Element" width="105" x="286" y="327">
+<element height="46" id="Element@2213401:1452194596455" name="EviCore_IdentifyCase2_Dec_Authorization" src="com.evi.main.elements.IsEqual" type="Decision Element" width="268" x="164" y="295">
 <exit_states>
 <exit_state name="equal" target="Element@5111778:1452194649102"/>
 <exit_state name="notequal" target="Element@6589112:1452194681437"/>
@@ -22,7 +22,7 @@
 <page_connector target="Element@24710577:1451650167364">IdentifyCase3<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@6589112:1452194681437" name="CheckConfidenceLevel_01" src="com.evi.main.elements.CheckConfidenceLevel" type="Decision Element" width="188" x="232" y="464">
+<element height="46" id="Element@6589112:1452194681437" name="EviCore_IdentifyCase2_Dec_CheckConfidence" src="com.evi.main.elements.CheckConfidenceLevel" type="Decision Element" width="290" x="159" y="403">
 <exit_states>
 <exit_state name="highConfidence"/>
 <exit_state name="lowConfidence"/>

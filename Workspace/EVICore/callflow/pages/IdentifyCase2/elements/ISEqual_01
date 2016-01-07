@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<decision_element id="Element@2213401:1452194596455" name="ISEqual_01" version="6.0.1">
-<config>
-<settings>
-<setting name="SessionValue">{Data.Element.InputElement_01.value}</setting>
-<setting name="comparevalue1">authorization</setting>
-</settings>
-</config>
-</decision_element>

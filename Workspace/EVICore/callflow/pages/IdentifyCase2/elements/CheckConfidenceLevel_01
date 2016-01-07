@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<decision_element id="Element@6589112:1452194681437" name="CheckConfidenceLevel_01" version="6.0.1">
-<config>
-<settings>
-<setting name="defaultMidConfidence">0.5</setting>
-<setting name="formConfidence">{Data.Element.InputElement_01.confidence}</setting>
-</settings>
-</config>
-</decision_element>
