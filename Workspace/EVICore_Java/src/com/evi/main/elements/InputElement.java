@@ -154,7 +154,7 @@ public class InputElement extends VoiceElementBase implements AudiumElement {
 						"DTMF Grammar",
 						"URL for DTMF grammar",
 						Setting.OPTIONAL,
-						Setting.SINGLE,
+						Setting.REPEATABLE,
 						Setting.SUBSTITUTION_ALLOWED,
 						Setting.STRING);	
 
@@ -164,7 +164,7 @@ public class InputElement extends VoiceElementBase implements AudiumElement {
 						"Speech Grammar",
 						"URL for Speech grammar",
 						Setting.OPTIONAL,
-						Setting.SINGLE,
+						Setting.REPEATABLE,
 						Setting.SUBSTITUTION_ALLOWED,
 						Setting.STRING);	
 

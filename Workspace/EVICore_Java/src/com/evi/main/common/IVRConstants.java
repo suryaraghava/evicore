@@ -26,4 +26,7 @@ public class IVRConstants {
 	public static String highConfidence = "highConfidence";
 	public static String lowConfidence = "lowConfidence";
 	
+	public static String equal = "equal";
+	public static String notequal = "notequal";
+	
 }

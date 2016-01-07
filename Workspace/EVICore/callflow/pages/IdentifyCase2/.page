@@ -2,15 +2,27 @@
 <page id="Page@21347346:1451650149640" name="IdentifyCase2" version="6.0.1">
 <element height="46" id="Element@20873989:1451650149640" name="IdentifyCase2" type="Page Entry" width="121" x="300" y="30">
 <exit_states>
-<exit_state name="next" target="Element@2697554:1451666085202"/>
+<exit_state name="next" target="Element@8873478:1452193722429"/>
 </exit_states>
 </element>
-<element height="46" id="Element@2697554:1451666085202" name="SetValuesToSession_02" src="com.evi.main.elements.SetValuesToSession" type="Action Element" width="170" x="313" y="165">
+<element height="46" id="Element@8873478:1452193722429" name="InputElement_01" src="com.evi.main.elements.InputElement" type="Voice Element" width="138" x="301" y="193">
 <exit_states>
-<exit_state name="done"/>
+<exit_state name="optionX" target="Element@2213401:1452194596455"/>
+<exit_state name="maxError"/>
 </exit_states>
 </element>
-<element height="46" id="Element@22864226:1451756030600" name="CheckConfidenceLevel_01" src="com.evi.main.elements.CheckConfidenceLevel" type="Decision Element" width="188" x="360" y="335">
+<element height="46" id="Element@2213401:1452194596455" name="ISEqual_01" src="com.evi.main.elements.IsEqual" type="Decision Element" width="105" x="286" y="327">
+<exit_states>
+<exit_state name="equal" target="Element@5111778:1452194649102"/>
+<exit_state name="notequal" target="Element@6589112:1452194681437"/>
+<exit_state name="error"/>
+</exit_states>
+</element>
+<element height="46" id="Element@5111778:1452194649102" name="IdentifyCase3" type="Page Connector" width="121" x="513" y="339">
+<page_connector target="Element@24710577:1451650167364">IdentifyCase3<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@6589112:1452194681437" name="CheckConfidenceLevel_01" src="com.evi.main.elements.CheckConfidenceLevel" type="Decision Element" width="188" x="232" y="464">
 <exit_states>
 <exit_state name="highConfidence"/>
 <exit_state name="lowConfidence"/>
