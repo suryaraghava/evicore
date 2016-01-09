@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@10096755:1452319747691" name="EviCore_FaxStatus1_Input_EntFaxNum" version="6.0.1">
+<config>
+<settings>
+<setting name="inputType">both</setting>
+<setting name="MaxErrors">3</setting>
+<setting name="confidence"/>
+<setting name="grammarSlot">out</setting>
+<setting name="dtmfGrammar">yesno_dtmf.grxml</setting>
+<setting name="speechGrammar">yesno.grxml</setting>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="Both">
+<audio_item name="silence" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="silence.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="nomatch_audio_group">
+<audio_item name="1009" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1009.wav"><![CDATA[I’m sorry, I didn’t understand you.]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="1067" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1067.wav"><![CDATA[To use this number ending in]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="FaxNum" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="10_digit_whole_number" output_format="digits_with_pauses" type="phone">{Data.Session.EntFaxNum}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="1068" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1068.wav"><![CDATA[say ‘yes’ or press 1. To enter a different number, say ‘no’ or press 2]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="nomatch_audio_group">
+<audio_item name="1010" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1010.wav"><![CDATA[I’m sorry, I still didn’t understand you.]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="1067" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1067.wav"><![CDATA[To use this number ending in]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="FaxNum" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="10_digit_whole_number" output_format="digits_with_pauses" type="phone">{Data.Session.EntFaxNum}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="1069" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1069.wav"><![CDATA[press 1. To enter a different number, press 2.]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="noinput_audio_group">
+<audio_item name="1067" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1067.wav"><![CDATA[To use this number ending in]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="FaxNum" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="10_digit_whole_number" output_format="digits_with_pauses" type="phone">{Data.Session.EntFaxNum}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="1068" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1068.wav"><![CDATA[say ‘yes’ or press 1. To enter a different number, say ‘no’ or press 2]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="noinput_audio_group">
+<audio_item name="1067" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1067.wav"><![CDATA[To use this number ending in]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="FaxNum" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="10_digit_whole_number" output_format="digits_with_pauses" type="phone">{Data.Session.EntFaxNum}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="1069" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1069.wav"><![CDATA[press 1. To enter a different number, press 2.]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

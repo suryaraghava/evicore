@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@6740794:1452280448956" name="EviCore_IdentifyCase3_Dec_AuthNumDonno" version="6.0.1">
+<config>
+<settings>
+<setting name="SessionValue">EntAuthNum</setting>
+<setting name="comparevalue1">donno</setting>
+</settings>
+</config>
+</decision_element>

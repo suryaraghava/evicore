@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@13241152:1452284900721" name="EviCore_ReadStatus1_Input_ClinicalInfo" version="6.0.1">
+<config>
+<settings>
+<setting name="inputType">both</setting>
+<setting name="MaxErrors">3</setting>
+<setting name="confidence"/>
+<setting name="grammarSlot"/>
+<setting name="dtmfGrammar"/>
+<setting name="speechGrammar"/>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="Both">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri=""><![CDATA[Clinical information is needed for your case. Clinical information can be provided via the web (medsolutionsonline.com) or fax (888-693-3210). You may also press ‘0’ to speak with a clinical representative.]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

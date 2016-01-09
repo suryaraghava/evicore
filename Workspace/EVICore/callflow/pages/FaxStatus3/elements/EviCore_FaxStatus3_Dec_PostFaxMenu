@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@22950531:1452321713907" name="EviCore_FaxStatus3_Dec_PostFaxMenu" version="6.0.1">
+<config>
+<settings>
+<setting name="SessionValue">{Data.Element.EviCore_FaxStatus3_Input_PostFaxMenu.value}</setting>
+<setting name="comparevalue1">Yes</setting>
+<setting name="comparevalue2">No</setting>
+<setting name="comparevalue3">agent</setting>
+</settings>
+</config>
+</decision_element>

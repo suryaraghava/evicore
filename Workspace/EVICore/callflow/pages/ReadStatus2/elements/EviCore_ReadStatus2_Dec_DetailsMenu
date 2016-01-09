@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@961193:1452286112627" name="EviCore_ReadStatus2_Dec_DetailsMenu" version="6.0.1">
+<config>
+<settings>
+<setting name="SessionValue">{Data.Element.EviCore_ReadStatus2_Input_DetailsMenu.value}</setting>
+<setting name="comparevalue1">hearthedetails</setting>
+<setting name="comparevalue2">fax</setting>
+<setting name="comparevalue3">both</setting>
+</settings>
+</config>
+</decision_element>

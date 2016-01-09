@@ -1,8 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <page id="Page@29550610:1451650366559" name="ReadStatus8" version="6.0.1">
-<element height="46" id="Element@17968650:1451650366559" name="ReadStatus8" type="Page Entry" width="114" x="300" y="30">
+<element height="46" id="Element@17968650:1451650366559" name="ReadStatus8" type="Page Entry" width="114" x="340" y="19">
 <exit_states>
-<exit_state name="next"/>
+<exit_state name="next" target="Element@13676699:1452332754061"/>
+</exit_states>
+</element>
+<element height="46" id="Element@21358176:1452318708272" name="ReadStatus7" type="Page Connector" width="114" x="27" y="253">
+<page_connector target="Element@20161380:1451650348940">ReadStatus7<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@24861273:1452318708272" name="Main1" type="Page Connector" width="83" x="69" y="376">
+<page_connector target="Element@31912826:1451650108059">Main1<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@23634544:1452318708272" name="Transfer" type="Page Connector" width="93" x="341" y="468">
+<page_connector target="Element@20132617:1451650491260">Transfer<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1564844:1452318708272" name="EviCore_ReadStatus8_Input_PostDenialMenu" src="com.evi.main.elements.InputElement" type="Voice Element" width="284" x="260" y="184">
+<exit_states>
+<exit_state name="optionX" target="Element@8418328:1452318708272"/>
+<exit_state name="maxError" target="Element@22634757:1452334945159"/>
+</exit_states>
+</element>
+<element height="46" id="Element@8418328:1452318708272" name="EviCore_ReadStatus8_Dec_PostDenialMenu" src="com.evi.main.elements.DecisionWith4Exits" type="Decision Element" width="276" x="260" y="292">
+<exit_states>
+<exit_state name="comparevalue1" target="Element@21358176:1452318708272"/>
+<exit_state name="comparevalue2" target="Element@24861273:1452318708272"/>
+<exit_state name="comparevalue3" target="Element@23634544:1452318708272"/>
+<exit_state name="comparevalue4" target="Element@23634544:1452318708272">
+<bendpoint>
+<dim1 x="178" y="106"/>
+<dim2 x="189" y="-70"/>
+</bendpoint>
+</exit_state>
+<exit_state name="novalue" target="Element@23634544:1452318708272">
+<bendpoint>
+<dim1 x="-177" y="118"/>
+<dim2 x="-166" y="-58"/>
+</bendpoint>
+</exit_state>
+<exit_state name="error" target="Element@22634757:1452334945159"/>
+</exit_states>
+</element>
+<element height="46" id="Element@13676699:1452332754061" name="EviCore_ReadStatus8_Audio_PostDenialMenu" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="288" x="255" y="106">
+<exit_states>
+<exit_state name="done" target="Element@1564844:1452318708272"/>
+</exit_states>
+</element>
+<element height="46" id="Element@22634757:1452334945159" name="EviCore_ReadStatus8_VDN_PostDenialMenu" src="com.evi.main.elements.SetTransferVDN" type="Action Element" width="280" x="649" y="372">
+<exit_states>
+<exit_state name="done" target="Element@23634544:1452318708272"/>
 </exit_states>
 </element>
 </page>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@7956826:1452320773861" name="EviCore_FaxStatus2_Input_GetFaxNum" version="6.0.1">
+<config>
+<settings>
+<setting name="inputType">both</setting>
+<setting name="MaxErrors">3</setting>
+<setting name="confidence"/>
+<setting name="grammarSlot">out</setting>
+<setting name="dtmfGrammar">digits_dtmf.grxml</setting>
+<setting name="speechGrammar">digits.grxml</setting>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="Both">
+<audio_item name="silence" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="silence.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="nomatch_audio_group">
+<audio_item name="1009" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1009.wav"><![CDATA[I’m sorry, I didn’t understand you.]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="1071" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1071.wav"><![CDATA[Please speak or enter the 10 digit fax number including the area code now.]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="nomatch_audio_group">
+<audio_item name="1010" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1010.wav"><![CDATA[I’m sorry, I still didn’t understand you]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="1072" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1072.wav"><![CDATA[Using your telephone’s keypad, please enter the 10 digit fax number you would like to use.]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="noinput_audio_group">
+<audio_item name="1071" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1071.wav"><![CDATA[Please speak or enter the 10 digit fax number including the area code now.]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="noinput_audio_group">
+<audio_item name="1072" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1072.wav"><![CDATA[Using your telephone’s keypad, please enter the 10 digit fax number you would like to use.]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@15210765:1452318449081" name="EviCore_ReadStatus7_Check_NumCodes" version="6.0.1">
+<config>
+<settings>
+<setting name="SessionValue">OptCodes</setting>
+<setting name="comparevalue1">Yes</setting>
+</settings>
+</config>
+</decision_element>

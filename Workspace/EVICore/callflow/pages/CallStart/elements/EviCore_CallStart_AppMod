@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@33160237:1452323779475" name="EviCore_CallStart_AppMod" version="6.0.1">
+<config>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path">{Data.Session.audiopath}</setting>
+<setting name="remove_session_data"/>
+</settings>
+</config>
+</action_element>

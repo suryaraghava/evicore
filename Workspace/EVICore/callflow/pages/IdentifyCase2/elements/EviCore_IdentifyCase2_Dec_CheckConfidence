@@ -2,8 +2,8 @@
 <decision_element id="Element@6589112:1452194681437" name="EviCore_IdentifyCase2_Dec_CheckConfidence" version="6.0.1">
 <config>
 <settings>
-<setting name="defaultMidConfidence">0.5</setting>
-<setting name="formConfidence">{Data.Element.EviCore_IdentifyCase1_Input_CaseID.confidence}</setting>
+<setting name="defaultMidConfidence">{Data.Session.midConfidence}</setting>
+<setting name="formConfidence">{Data.Element.EviCore_IdentifyCase2_Input_CaseID.confidence}</setting>
 </settings>
 </config>
 </decision_element>

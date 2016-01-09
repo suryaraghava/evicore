@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@3023161:1452317571465" name="EviCore_ReadStatus5_Dec_ApprovalFaxMenu" version="6.0.1">
+<config>
+<settings>
+<setting name="SessionValue">{Data.Element.EviCore_ReadStatus5_Input_ApprovalFaxMenu.value}</setting>
+<setting name="comparevalue1">Yes</setting>
+<setting name="comparevalue2">No</setting>
+<setting name="comparevalue3">mainmenu</setting>
+<setting name="comparevalue4">agent</setting>
+</settings>
+</config>
+</decision_element>

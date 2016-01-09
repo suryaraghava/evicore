@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@1485069:1452321567217" name="EviCore_FaxStatus3_Input_PostFaxMenu" version="6.0.1">
+<config>
+<settings>
+<setting name="inputType">both</setting>
+<setting name="MaxErrors">3</setting>
+<setting name="confidence"/>
+<setting name="grammarSlot">out</setting>
+<setting name="dtmfGrammar">yesno_dtmf.grxml</setting>
+<setting name="dtmfGrammar">agent_dtmf.grxml</setting>
+<setting name="speechGrammar">yesno.grxml</setting>
+<setting name="speechGrammar">agent.grxml</setting>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="Both">
+<audio_item name="silence" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="silence.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="nomatch_audio_group">
+<audio_item name="1009" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1009.wav"><![CDATA[I’m sorry, I didn’t understand you.]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="1076" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1076.wav"><![CDATA[To check another case, say ‘yes’ or press 1. To return to the main menu, say ‘no’ or press 2]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="nomatch_audio_group">
+<audio_item name="1010" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1010.wav"><![CDATA[I’m sorry, I still didn’t understand you]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="1077" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1077.wav"><![CDATA[Using your telephone’s keypad, please select one of the following. To check another case, press 1. To return to the main menu, press 2. To speak with an agent, press 0]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="noinput_audio_group">
+<audio_item name="1076" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1076.wav"><![CDATA[To check another case, say ‘yes’ or press 1. To return to the main menu, say ‘no’ or press 2]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="noinput_audio_group">
+<audio_item name="1077" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1077.wav"><![CDATA[Using your telephone’s keypad, please select one of the following. To check another case, press 1. To return to the main menu, press 2. To speak with an agent, press 0]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@8418328:1452318708272" name="EviCore_ReadStatus8_Dec_PostDenialMenu" version="6.0.1">
+<config>
+<settings>
+<setting name="SessionValue">{Data.Element.EviCore_ReadStatus6_Input_NonApprovedMenu.value}</setting>
+<setting name="comparevalue1">repeatthedetails</setting>
+<setting name="comparevalue2">anothercase</setting>
+<setting name="comparevalue3">mainmenu</setting>
+<setting name="comparevalue4">agent</setting>
+</settings>
+</config>
+</decision_element>

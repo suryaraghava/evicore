@@ -1,8 +1,102 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <page id="Page@19790804:1451650458734" name="FaxStatus1" version="6.0.1">
-<element height="46" id="Element@32517988:1451650458734" name="FaxStatus1" type="Page Entry" width="105" x="300" y="30">
+<element height="46" id="Element@32517988:1451650458734" name="FaxStatus1" type="Page Entry" width="105" x="323" y="30">
 <exit_states>
-<exit_state name="next"/>
+<exit_state name="next" target="Element@24527855:1452319246368"/>
+</exit_states>
+</element>
+<element height="46" id="Element@24527855:1452319246368" name="EviCore_FaxStatus1_Check_FaxNull" src="com.evi.main.elements.IsNullorEmpty" type="Decision Element" width="232" x="260" y="138">
+<exit_states>
+<exit_state name="Yes" target="Element@8852885:1452319747691">
+<bendpoint>
+<dim1 x="143" y="45"/>
+<dim2 x="144" y="-331"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="141" y="305"/>
+<dim2 x="142" y="-71"/>
+</bendpoint>
+</exit_state>
+<exit_state name="No" target="Element@8961849:1452332949790"/>
+</exit_states>
+</element>
+<element height="46" id="Element@31576562:1452319256665" name="EviCore_FaxStatus1_Input_QueryFaxNum" src="com.evi.main.elements.InputElement" type="Voice Element" width="264" x="244" y="309">
+<exit_states>
+<exit_state name="optionX" target="Element@12259340:1452319679053"/>
+<exit_state name="maxError" target="Element@16082333:1452334630499"/>
+</exit_states>
+</element>
+<element height="46" id="Element@12259340:1452319679053" name="EviCore_FaxStatus1_Dec_QueryFaxNum" src="com.evi.main.elements.DecisionWith2Exits" type="Decision Element" width="256" x="246" y="406">
+<exit_states>
+<exit_state name="comparevalue1" target="Element@13342718:1452319726028"/>
+<exit_state name="comparevalue2" target="Element@8852885:1452319747691"/>
+<exit_state name="novalue" target="Element@5008466:1452320037778">
+<bendpoint>
+<dim1 x="145" y="55"/>
+<dim2 x="144" y="-421"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="144" y="415"/>
+<dim2 x="143" y="-61"/>
+</bendpoint>
+</exit_state>
+<exit_state name="error" target="Element@19945:1452334721043"/>
+</exit_states>
+</element>
+<element height="46" id="Element@13342718:1452319726028" name="FaxStatus3" type="Page Connector" width="105" x="-12" y="633">
+<page_connector target="Element@20210666:1451650479165">FaxStatus3<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@10096755:1452319747691" name="EviCore_FaxStatus1_Input_EntFaxNum" src="com.evi.main.elements.InputElement" type="Voice Element" width="251" x="247" y="682">
+<exit_states>
+<exit_state name="optionX" target="Element@11406093:1452319747691"/>
+<exit_state name="maxError" target="Element@19945:1452334721043"/>
+</exit_states>
+</element>
+<element height="46" id="Element@8852885:1452319747691" name="EviCore_FaxStatus1_Check_EntFaxNum" src="com.evi.main.elements.IsNullorEmpty" type="Decision Element" width="254" x="248" y="514">
+<exit_states>
+<exit_state name="Yes" target="Element@646229:1452320006620"/>
+<exit_state name="No" target="Element@3739932:1452333118226"/>
+</exit_states>
+</element>
+<element height="46" id="Element@11406093:1452319747691" name="EviCore_FaxStatus1_Dec_EntFaxNum" src="com.evi.main.elements.DecisionWith2Exits" type="Decision Element" width="241" x="254" y="782">
+<exit_states>
+<exit_state name="comparevalue1" target="Element@13342718:1452319726028"/>
+<exit_state name="comparevalue2" target="Element@646229:1452320006620"/>
+<exit_state name="novalue" target="Element@5008466:1452320037778"/>
+<exit_state name="error" target="Element@19945:1452334721043"/>
+</exit_states>
+</element>
+<element height="46" id="Element@646229:1452320006620" name="FaxStatus2" type="Page Connector" width="105" x="716" y="511">
+<page_connector target="Element@1868482:1451650469561">FaxStatus2<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@5008466:1452320037778" name="Transfer" type="Page Connector" width="93" x="329" y="882">
+<page_connector target="Element@20132617:1451650491260">Transfer<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@13667442:1452320062040" name="Transfer" type="Page Connector" width="93" x="952" y="294">
+<page_connector target="Element@20132617:1451650491260">Transfer<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@8961849:1452332949790" name="EviCore_FaxStatus1_Audio_QueryFaxNum" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="268" x="243" y="223">
+<exit_states>
+<exit_state name="done" target="Element@31576562:1452319256665"/>
+</exit_states>
+</element>
+<element height="46" id="Element@3739932:1452333118226" name="EviCore_FaxStatus1_Audio_EntFaxNum" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="253" x="246" y="599">
+<exit_states>
+<exit_state name="done" target="Element@10096755:1452319747691"/>
+</exit_states>
+</element>
+<element height="46" id="Element@16082333:1452334630499" name="EviCore_FaxStatus1_VDN_QueryFaxNum" src="com.evi.main.elements.SetTransferVDN" type="Action Element" width="260" x="614" y="308">
+<exit_states>
+<exit_state name="done" target="Element@13667442:1452320062040"/>
+</exit_states>
+</element>
+<element height="46" id="Element@19945:1452334721043" name="EviCore_FaxStatus1_VDN_EntFaxNum" src="com.evi.main.elements.SetTransferVDN" type="Action Element" width="245" x="661" y="676">
+<exit_states>
+<exit_state name="done" target="Element@5008466:1452320037778"/>
 </exit_states>
 </element>
 </page>

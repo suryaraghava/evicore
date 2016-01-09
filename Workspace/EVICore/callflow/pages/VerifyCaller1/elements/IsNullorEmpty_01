@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<decision_element id="Element@20333989:1451666463841" name="IsNullorEmpty_01" version="6.0.1">
-<config>
-<settings>
-<setting name="SessionValue">ID</setting>
-</settings>
-</config>
-</decision_element>

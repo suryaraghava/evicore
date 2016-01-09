@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@7242933:1452284975020" name="EviCore_ReadStatus1_Dec_ClinicalInfo0" version="6.0.1">
+<config>
+<settings>
+<setting name="SessionValue">{Data.Element.EviCore_ReadStatus1_Input_ClinicalInfo.value}</setting>
+<setting name="comparevalue1">zero</setting>
+</settings>
+</config>
+</decision_element>

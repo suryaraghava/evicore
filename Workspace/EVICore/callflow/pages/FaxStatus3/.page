@@ -1,8 +1,77 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <page id="Page@22529209:1451650479165" name="FaxStatus3" version="6.0.1">
-<element height="46" id="Element@20210666:1451650479165" name="FaxStatus3" type="Page Entry" width="105" x="300" y="30">
+<element height="46" id="Element@20210666:1451650479165" name="FaxStatus3" type="Page Entry" width="105" x="381" y="21">
 <exit_states>
-<exit_state name="next"/>
+<exit_state name="next" target="Element@12042155:1452321471841"/>
+</exit_states>
+</element>
+<element height="46" id="Element@12042155:1452321471841" name="EviCore_FaxStatus3_SendFax" src="com.evi.main.elements.SendFax" type="Decision Element" width="198" x="334" y="128">
+<exit_states>
+<exit_state name="success" target="Element@7857863:1452321534336"/>
+<exit_state name="error" target="Element@18291248:1452321494339"/>
+</exit_states>
+</element>
+<element height="46" id="Element@18291248:1452321494339" name="EviCore_FaxStatus3_Audio_ErrorConfirmFax" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="278" x="300" y="218">
+<exit_states>
+<exit_state name="done" target="Element@9271572:1452321514305"/>
+</exit_states>
+</element>
+<element height="46" id="Element@9271572:1452321514305" name="Transfer" type="Page Connector" width="93" x="65" y="387">
+<page_connector target="Element@20132617:1451650491260">Transfer<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@7857863:1452321534336" name="EviCore_FaxStatus3_Audio_ConfirmFax" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="253" x="332" y="306">
+<exit_states>
+<exit_state name="done" target="Element@15998874:1452333812711"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1485069:1452321567217" name="EviCore_FaxStatus3_Input_PostFaxMenu" src="com.evi.main.elements.InputElement" type="Voice Element" width="263" x="334" y="521">
+<exit_states>
+<exit_state name="optionX" target="Element@22950531:1452321713907"/>
+<exit_state name="maxError" target="Element@9271572:1452321514305"/>
+</exit_states>
+</element>
+<element height="46" id="Element@22950531:1452321713907" name="EviCore_FaxStatus3_Dec_PostFaxMenu" src="com.evi.main.elements.DecisionWith3Exits" type="Decision Element" width="251" x="339" y="644">
+<exit_states>
+<exit_state name="comparevalue1" target="Element@23486609:1452321762107">
+<bendpoint>
+<dim1 x="-107" y="178"/>
+<dim2 x="-148" y="-155"/>
+</bendpoint>
+</exit_state>
+<exit_state name="comparevalue2" target="Element@23486609:1452321762107">
+<bendpoint>
+<dim1 x="-187" y="151"/>
+<dim2 x="-228" y="-182"/>
+</bendpoint>
+</exit_state>
+<exit_state name="comparevalue3" target="Element@23486609:1452321762107">
+<bendpoint>
+<dim1 x="230" y="152"/>
+<dim2 x="189" y="-181"/>
+</bendpoint>
+</exit_state>
+<exit_state name="novalue" target="Element@23486609:1452321762107">
+<bendpoint>
+<dim1 x="-256" y="126"/>
+<dim2 x="-297" y="-207"/>
+</bendpoint>
+</exit_state>
+<exit_state name="error" target="Element@7750055:1452334399306"/>
+</exit_states>
+</element>
+<element height="46" id="Element@23486609:1452321762107" name="Transfer" type="Page Connector" width="93" x="459" y="977">
+<page_connector target="Element@20132617:1451650491260">Transfer<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@15998874:1452333812711" name="EviCore_FaxStatus3_Audio_PostFaxMenu" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="263" x="331" y="401">
+<exit_states>
+<exit_state name="done" target="Element@1485069:1452321567217"/>
+</exit_states>
+</element>
+<element height="46" id="Element@7750055:1452334399306" name="EviCore_FaxStatus3_VDN_PostFaxMenu" src="com.evi.main.elements.SetTransferVDN" type="Action Element" width="255" x="385" y="813">
+<exit_states>
+<exit_state name="done" target="Element@23486609:1452321762107"/>
 </exit_states>
 </element>
 </page>

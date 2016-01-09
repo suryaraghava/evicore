@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@22625557:1452313312290" name="EviCore_ReadStatus3_Audio_PatientInfo" version="6.0.1">
+<config>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="1041" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1041.wav"><![CDATA[The patient’s name is]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="PatientName" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri=""><![CDATA[{Data.Session.PaitentName}]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="1042" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1042.wav"><![CDATA[The referring physician is]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="PhysName" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri=""><![CDATA[{Data.Session.PhysName}]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="1043" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1043.wav"><![CDATA[and the services will be provided at]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="FacilityName" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri=""><![CDATA[{Data.Session.FacilityName}]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

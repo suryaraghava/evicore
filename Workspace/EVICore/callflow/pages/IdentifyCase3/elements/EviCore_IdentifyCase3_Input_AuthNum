@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@29616062:1452280135138" name="EviCore_IdentifyCase3_Input_AuthNum" version="6.0.1">
+<config>
+<settings>
+<setting name="inputType">both</setting>
+<setting name="MaxErrors">3</setting>
+<setting name="confidence"/>
+<setting name="grammarSlot"/>
+<setting name="dtmfGrammar"/>
+<setting name="speechGrammar"/>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="Both">
+<audio_item name="silence" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="silence.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="nomatch_audio_group">
+<audio_item name="1009" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1009.wav"><![CDATA[I’m sorry, I didn’t understand you.]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="1017" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1017.wav"><![CDATA[Please speak each letter and digit of the authorization number.]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="nomatch_audio_group">
+<audio_item name="1010" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1010.wav"><![CDATA[I’m sorry, I still didn’t understand you.]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="1018" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1018.wav"><![CDATA[If the authorization number only contains digits, please enter them using your telephone’s keypad. Otherwise, please clearly speak each letter and digit of the number. For example, A 1 2 3 4 5 6.]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="noinput_audio_group">
+<audio_item name="1017" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1017.wav"><![CDATA[Please speak each letter and digit of the authorization number.]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="noinput_audio_group">
+<audio_item name="1018" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1018.wav"><![CDATA[If the authorization number only contains digits, please enter them using your telephone’s keypad. Otherwise, please clearly speak each letter and digit of the number. For example, A 1 2 3 4 5 6.]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@20547343:1452339205952" name="EviCore_ReadStatus1_Input_Denied" version="6.0.1">
+<config>
+<settings>
+<setting name="inputType">both</setting>
+<setting name="MaxErrors">1</setting>
+<setting name="confidence"/>
+<setting name="grammarSlot"/>
+<setting name="dtmfGrammar"/>
+<setting name="speechGrammar"/>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="Both">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri=""><![CDATA[This case has been denied. Would you like to hear the denial reason? 	]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

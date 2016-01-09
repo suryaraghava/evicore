@@ -2,7 +2,114 @@
 <page id="Page@18900648:1451650242314" name="VerifyCaller2" version="6.0.1">
 <element height="46" id="Element@3388854:1451650242314" name="VerifyCaller2" type="Page Entry" width="116" x="300" y="30">
 <exit_states>
-<exit_state name="next"/>
+<exit_state name="next" target="Element@24386119:1452315356174"/>
+</exit_states>
+</element>
+<element height="46" id="Element@24386119:1452315356174" name="EviCore_VerifyCaller2_Dec_CaseJustEntered" src="com.evi.main.elements.IsEqual" type="Decision Element" width="276" x="215" y="142">
+<exit_states>
+<exit_state name="equal" target="Element@3131022:1452315373229"/>
+<exit_state name="notequal" target="Element@63855:1452315374822">
+<bendpoint>
+<dim1 x="199" y="92"/>
+<dim2 x="203" y="-90"/>
+</bendpoint>
+</exit_state>
+<exit_state name="error" target="Element@28575505:1452336002386"/>
+</exit_states>
+</element>
+<element height="46" id="Element@3131022:1452315373229" name="EviCore_VerifyCaller2_Audio_CaseJustEnteredYes" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="306" x="200" y="230">
+<exit_states>
+<exit_state name="done" target="Element@18917829:1452315383664">
+<bendpoint>
+<dim1 x="255" y="88"/>
+<dim2 x="215" y="-74"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@63855:1452315374822" name="EviCore_VerifyCaller2_Audio_CaseJustEnteredNo" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="304" x="202" y="327">
+<exit_states>
+<exit_state name="done" target="Element@18917829:1452315383664"/>
+</exit_states>
+</element>
+<element height="46" id="Element@18917829:1452315383664" name="EviCore_VerifyCaller2_Input_TaxID" src="com.evi.main.elements.InputElement" type="Voice Element" width="228" x="236" y="415">
+<exit_states>
+<exit_state name="optionX" target="Element@23820290:1452330247725"/>
+<exit_state name="maxError" target="Element@215181:1452336033050"/>
+</exit_states>
+</element>
+<element height="46" id="Element@7144751:1452315640355" name="EviCore_VerifyCaller2_Check_TaxIDDonno" src="com.evi.main.elements.IsEqual" type="Decision Element" width="269" x="216" y="580">
+<exit_states>
+<exit_state name="equal" target="Element@2046843:1452315700680"/>
+<exit_state name="notequal" target="Element@25759499:1452315683045"/>
+<exit_state name="error" target="Element@215181:1452336033050"/>
+</exit_states>
+</element>
+<element height="46" id="Element@25759499:1452315683045" name="EviCore_VerifyCaller2_Check_TaxIDConf" src="com.evi.main.elements.CheckConfidenceLevel" type="Decision Element" width="259" x="214" y="677">
+<exit_states>
+<exit_state name="highConfidence" target="Element@4036946:1452315731491"/>
+<exit_state name="lowConfidence" target="Element@17218875:1452330395754"/>
+<exit_state name="error" target="Element@5030843:1452336063371"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2046843:1452315700680" name="Transfer" type="Page Connector" width="93" x="806" y="597">
+<page_connector target="Element@20132617:1451650491260">Transfer<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@4036946:1452315731491" name="EviCore_VerifyCaller2_Audio_TaxIDHighConf" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="284" x="-171" y="825">
+<exit_states>
+<exit_state name="done" target="Element@25619235:1452315904575"/>
+</exit_states>
+</element>
+<element height="46" id="Element@25619235:1452315904575" name="LookupCase" type="Page Connector" width="115" x="-91" y="693">
+<page_connector target="Element@30209543:1452282121553">LookupCase<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@23609568:1452315927105" name="EviCore_VerifyCaller2_Input_TaxIDConfirm" src="com.evi.main.elements.InputElement" type="Voice Element" width="274" x="208" y="865">
+<exit_states>
+<exit_state name="optionX" target="Element@25722405:1452316355658"/>
+<exit_state name="maxError" target="Element@5030843:1452336063371"/>
+</exit_states>
+</element>
+<element height="46" id="Element@25722405:1452316355658" name="EviCore_VerifyCaller2_Dec_TaxIDConfirm" src="com.evi.main.elements.DecisionWith2Exits" type="Decision Element" width="264" x="212" y="970">
+<exit_states>
+<exit_state name="comparevalue1" target="Element@4036946:1452315731491"/>
+<exit_state name="comparevalue2" target="Element@18917829:1452315383664"/>
+<exit_state name="novalue" target="Element@1358015:1452335930025"/>
+<exit_state name="error" target="Element@5030843:1452336063371"/>
+</exit_states>
+</element>
+<element height="46" id="Element@14545960:1452316429883" name="Transfer" type="Page Connector" width="93" x="674" y="235">
+<page_connector target="Element@20132617:1451650491260">Transfer<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@23820290:1452330247725" name="EviCore_VerifyCaller2_SetSession_TaxID" src="com.evi.main.elements.SetValuesToSession" type="Action Element" width="255" x="226" y="500">
+<exit_states>
+<exit_state name="done" target="Element@7144751:1452315640355"/>
+</exit_states>
+</element>
+<element height="46" id="Element@17218875:1452330395754" name="EviCore_VerifyCaller2_Audio_TaxIDConfirm" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="276" x="204" y="765">
+<exit_states>
+<exit_state name="done" target="Element@23609568:1452315927105"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1358015:1452335930025" name="Transfer" type="Page Connector" width="93" x="768" y="804">
+<page_connector target="Element@20132617:1451650491260">Transfer<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@28575505:1452336002386" name="EviCore_VerifyCaller2_VDN_CaseJustEntered" src="com.evi.main.elements.SetTransferVDN" type="Action Element" width="280" x="579" y="137">
+<exit_states>
+<exit_state name="done" target="Element@14545960:1452316429883"/>
+</exit_states>
+</element>
+<element height="46" id="Element@215181:1452336033050" name="EviCore_VerifyCaller2_VDN_TaxID" src="com.evi.main.elements.SetTransferVDN" type="Action Element" width="224" x="739" y="475">
+<exit_states>
+<exit_state name="done" target="Element@2046843:1452315700680"/>
+</exit_states>
+</element>
+<element height="46" id="Element@5030843:1452336063371" name="EviCore_VerifyCaller2_VDN_TaxIDConfirm" src="com.evi.main.elements.SetTransferVDN" type="Action Element" width="268" x="670" y="677">
+<exit_states>
+<exit_state name="done" target="Element@1358015:1452335930025"/>
 </exit_states>
 </element>
 </page>

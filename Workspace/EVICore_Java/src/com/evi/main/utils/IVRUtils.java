@@ -42,6 +42,7 @@ import org.xml.sax.SAXException;
 import com.audium.server.session.APIBase;
 import com.audium.server.session.DecisionElementData;
 import com.audium.server.session.ElementAPI;
+import com.evi.main.common.IVRConstants;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -99,31 +100,20 @@ public class IVRUtils {
      * @return the property value
      */
     public static String getPropertyValue(Properties appProperties, String propertyName){
-        String hostname = null;
-        boolean defaultHost = false;
+        String hostname = getHostName();
         String propertyValue = null;
-        try {
-            InetAddress addr = InetAddress.getLocalHost();        
-            hostname = addr.getHostName().toLowerCase();
-            if(logger.isDebugEnabled())
-                logger.debug("[IVRUtils] Value of host name in "+hostname);
-        } catch (UnknownHostException ue) {
-            logger.error("[IVRUtils] Error getting hostname",ue);
-            hostname="default";
-            defaultHost = true;
-        }
         
-        if( !defaultHost ) {
+        if( null != hostname ) {
             propertyValue = appProperties.getProperty(hostname + "_"+ propertyName);
 
             if( propertyValue == null ) {
                 if(logger.isDebugEnabled())
                     logger.debug("[IVRUtils] Value of propertyName in "+propertyName+" appProperties:"+appProperties);
-                propertyValue = appProperties.getProperty("default" + propertyName);
+                propertyValue = appProperties.getProperty("default_" + propertyName);
                 
             }
         } else {
-            propertyValue = appProperties.getProperty("default" + "_"+propertyName);
+            propertyValue = appProperties.getProperty("default_"+propertyName);
             
         }
         return propertyValue; 
@@ -187,202 +177,7 @@ public class IVRUtils {
     		return str;
     }
     
-    /**
-     * Insert call record.
-     *
-     * @param callID the call id
-     * @param lang the lang
-     * @param sourceIVR the source ivr
-     * @return true, if successful
-     */
-    public static boolean insertCallRecord(String callID, String lang, String sourceIVR){
-		boolean rslt = false;
-		Connection connection = null;
-	    PreparedStatement pStatement = null;
-	    try
-	    {
-	      // the sql server driver string
-	      Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-	    
-	      // the sql server url
-	      String url = "jdbc:sqlserver://VSTUCCEHDSA:1433;DatabaseName=IVRSurvey";
-	      
-	      // get the sql server database connection
-	      connection = DriverManager.getConnection(url,"ivrsurvey", "F!agSt@rSv^");
-	      String sql = "INSERT INTO IVRSurvey.dbo.IVRCallRecord(CallID, LangSelected, SourceIVR) VALUES (?,?,?)";
-	      pStatement = connection.prepareStatement(sql);
-	      pStatement.setString(1, callID);
-	      pStatement.setString(2, lang);
-	      pStatement.setString(3, sourceIVR);
-	      int result = pStatement.executeUpdate();
-	      logger.debug("Insert IVRCallRecord result is:"+result);
-	      if( result > 0 ){
-	    	  rslt = true;
-	      }
-	    }
-	    catch (ClassNotFoundException e)
-	    {
-	    	logger.error("ClassNotFound Exception", e);
-	      
-	    }
-	    catch (SQLException e)
-	    {
-	    	logger.error("ExceptionSQL Exception while inserting call record: "+callID, e);
-	      
-	    } finally {
-	    	if( pStatement!= null ){
-	    		try {
-					pStatement.close();
-				} catch (SQLException e) {
-					// TODO Auto-generated catch block
-					logger.error("Exception while closing prepared statement", e);
-				}
-	    	}
-	    	if( connection != null )
-				try {
-					connection.close();
-				} catch (SQLException e) {
-					// TODO Auto-generated catch block
-					logger.error("Exception while closing connection", e);
-				}
-	    }
-	    logger.debug("Result of IVR Call Record insert is:"+rslt);
-	    return rslt;
-	}
-    
-    /**
-     * Gets the data source.
-     *
-     * @param s the s
-     * @return the data source
-     * @throws Exception the exception
-     */
-    public static DataSource getDataSource(String s) throws Exception {
-		String errorMsg = null;
-		DataSource datasource = null;
-		InitialContext initialcontext = null;
-		logger.debug("Entering getDataSource:"+s);
-		try {
-			initialcontext = new InitialContext();
-		} catch (NamingException namingexception) {
-			errorMsg = "NamingException occured: " + namingexception.getMessage();
-			logger.error("Exception while getting initialContext", namingexception);
-			return null;
-		}
-		Context context = null;
-		try {
-			context = (Context) initialcontext.lookup("java:comp/env");
-		} catch (NamingException nex) {
-			errorMsg = "NamingException occured: " + nex.getMessage();
-			throw new Exception(errorMsg, nex);
-		}
-		try {
-			datasource = (DataSource) context.lookup("jdbc/" + s);
-		} catch (NamingException namingexception3) {
-			try {
-				datasource = (DataSource) initialcontext.lookup("java:/"
-						+ s);
-			} catch (NamingException nex) {
-				errorMsg = "Problem looking up JNDI datasource: " + nex;
-				throw new Exception(errorMsg, nex);
-			}
-		} catch(Exception ex){
-			errorMsg = "Exception occured: " + ex.getMessage();
-			throw new Exception(errorMsg, ex);
-		}
-		if( datasource == null ){
-			errorMsg = "Problem lookingup JNDI datasource";
-			throw new Exception(errorMsg);
-		} else {
-			return datasource;
-		}
-	}
-    
-    /**
-     * Insert call record.
-     *
-     * @param dataSourceName the data source name
-     * @param callID the call id
-     * @param lang the lang
-     * @param sourceIVR the source ivr
-     * @return true, if successful
-     */
-    public static boolean insertCallRecord(String dataSourceName, String callID, String lang, String sourceIVR){
-		Connection connection = null;
-		boolean rslt = false;
-		PreparedStatement pStatement = null;
-		logger.debug("Entering insertCallRecord using DataSource:"+dataSourceName);
-		try {
-			connection = getJNDIConnection(dataSourceName);
-		} catch (Exception e) {
-			logger.error("Exception while inserting call record using direction database connection", e);
-			return insertCallRecord(callID, lang, sourceIVR);
-		}
-		logger.debug("Got connection from datasource:"+dataSourceName);
-		try {
-			String sql = "INSERT INTO IVRSurvey.dbo.IVRCallRecord(CallID, LangSelected, SourceIVR) VALUES (?,?,?)";
-		      pStatement = connection.prepareStatement(sql);
-		      pStatement.setString(1, callID);
-		      pStatement.setString(2, lang);
-		      pStatement.setString(3, sourceIVR);
-		      int result = pStatement.executeUpdate();
-		      logger.debug("Insert IVRCallRecord result is:"+result);
-		      if( result > 0 ){
-		    	  rslt = true;
-		    	  logger.debug("Inserted call record successfully- callId:"+callID);
-		      } else {
-		    	  logger.debug("Insert call record failed- callId:"+callID);
-		      }
-		      
-		} catch (Exception e) {
-			logger.error("Exception while inserting call details", e);
-		} finally {
-	    	if( pStatement!= null ){
-	    		try {
-					pStatement.close();
-				} catch (SQLException e) {
-					// TODO Auto-generated catch block
-					logger.error("Exception while closing prepared statement", e);
-				}
-	    	}
-	    	if( connection != null )
-				try {
-					connection.close();
-				} catch (SQLException e) {
-					// TODO Auto-generated catch block
-					logger.error("Exception while closing connection", e);
-				}
-	    }
-		return rslt;
-	}
-	
-	/**
-	 * Gets the JNDI connection.
-	 *
-	 * @param strJNDIName the str jndi name
-	 * @return the JNDI connection
-	 * @throws Exception the exception
-	 */
-	public static Connection getJNDIConnection(String strJNDIName) throws Exception {
-		DataSource datasource = null;
-		Connection connection = null;
-		logger.debug("Entering getJNDIConnection:"+strJNDIName);
-		try {
-			datasource = getDataSource(strJNDIName);
-		} catch (NamingException nex) {
-			throw new Exception("There was a problem looking up the JNDI datasource " + strJNDIName);
-		} catch(Exception ex){
-			throw new Exception(ex);
-		}
-		try {
-			connection = datasource.getConnection();
-		} catch (SQLException ex) {
-			throw new Exception("SQLException occured: " + ex.getMessage());
-		} catch (Exception ex) {
-			throw new Exception("Exception occured: " + ex.getMessage());
-		}
-		return connection;		
-	}
+   
     
 	public static String convertToSayItSmart(String value){
 		StringBuilder sb = new StringBuilder();
@@ -484,6 +279,14 @@ public class IVRUtils {
 			   resultMap.put(resultName, resultName);
 		}
 		return resultMap;
+	}
+	
+	public static void loadAllTestData(APIBase data,Properties appProperties){
+		String faxOnlyMode = IVRUtils.getPropertyValue(appProperties, IVRConstants.faxOnlyMode);
+		IVRUtils.setSessionDataAndLogAppLogAndLog4j(data, IVRConstants.faxOnlyMode, faxOnlyMode);
+		
+		String useUUICase = IVRUtils.getPropertyValue(appProperties, IVRConstants.UseUUICase);
+		IVRUtils.setSessionDataAndLogAppLogAndLog4j(data, IVRConstants.UseUUICase, useUUICase);
 	}
 	
     /**

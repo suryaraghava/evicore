@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@6172799:1452284277846" name="EviCore_ReadStatus1_Dec_IVRStatus" version="6.0.1">
+<config>
+<settings>
+<setting name="SessionValue">StatusCode</setting>
+<setting name="comparevalue1">A</setting>
+<setting name="comparevalue2">M</setting>
+<setting name="comparevalue3">D</setting>
+<setting name="comparevalue4">X</setting>
+<setting name="comparevalue5">V</setting>
+<setting name="comparevalue6">P</setting>
+<setting name="comparevalue7">O</setting>
+<setting name="comparevalue8">N</setting>
+<setting name="comparevalue9">F</setting>
+</settings>
+</config>
+</decision_element>

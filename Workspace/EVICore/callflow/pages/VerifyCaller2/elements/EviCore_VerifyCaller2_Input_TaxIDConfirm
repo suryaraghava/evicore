@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@23609568:1452315927105" name="EviCore_VerifyCaller2_Input_TaxIDConfirm" version="6.0.1">
+<config>
+<settings>
+<setting name="inputType">both</setting>
+<setting name="MaxErrors">3</setting>
+<setting name="confidence"/>
+<setting name="grammarSlot"/>
+<setting name="dtmfGrammar"/>
+<setting name="speechGrammar"/>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="Both">
+<audio_item name="silence" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="silence.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="nomatch_audio_group">
+<audio_item name="1099" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1009.wav"><![CDATA[I’m sorry, I didn’t understand you.]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="inputValue" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{Data.Session.EntTaxID}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="1020" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1020.wav"><![CDATA[If that is correct, say yes. Otherwise, say no.]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="nomatch_audio_group">
+<audio_item name="1010" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1010.wav"><![CDATA[I’m sorry, I still didn’t understand you.]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="inputValue" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{Data.Session.EntTaxID}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="1013" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1013.wav"><![CDATA[If that is correct, say yes or press 1. Otherwise, say no or press 2.]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="noinput_audio_group">
+<audio_item name="inputValue" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{Data.Session.EntTaxID}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="1020" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1020.wav"><![CDATA[If that is correct, say yes. Otherwise, say no.]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="noinput_audio_group">
+<audio_item name="inputValue" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{Data.Session.EntTaxID}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="1013" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1013.wav"><![CDATA[If that is correct, say yes or press 1. Otherwise, say no or press 2.]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

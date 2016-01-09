@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@20493513:1452279793126" name="EviCore_IdentifyCase2_SetSession_CNConfirmed" version="6.0.1">
+<config>
+<settings>
+<setting name="SessionName">CNConfirmed</setting>
+<setting name="SessionValue">TRUE</setting>
+</settings>
+</config>
+</action_element>

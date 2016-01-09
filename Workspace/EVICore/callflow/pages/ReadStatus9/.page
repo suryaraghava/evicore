@@ -2,7 +2,66 @@
 <page id="Page@14217387:1451650384604" name="ReadStatus9" version="6.0.1">
 <element height="46" id="Element@10522076:1451650384604" name="ReadStatus9" type="Page Entry" width="114" x="300" y="30">
 <exit_states>
-<exit_state name="next"/>
+<exit_state name="next" target="Element@24162082:1452332835177"/>
+</exit_states>
+</element>
+<element height="46" id="Element@10330562:1452318848504" name="EviCore_ReadStatus9_Input_PostApprovalMenu" src="com.evi.main.elements.InputElement" type="Voice Element" width="299" x="213" y="220">
+<exit_states>
+<exit_state name="optionX" target="Element@32348367:1452318981344"/>
+<exit_state name="maxError" target="Element@12781990:1452334882610"/>
+</exit_states>
+</element>
+<element height="46" id="Element@32348367:1452318981344" name="EviCore_ReadStatus9_Dec_PostApprovalMenu" src="com.evi.main.elements.DecisionWith6Exits" type="Decision Element" width="291" x="224" y="348">
+<exit_states>
+<exit_state name="comparevalue1" target="Element@3177782:1452319045505"/>
+<exit_state name="comparevalue2" target="Element@24119742:1452319062001"/>
+<exit_state name="comparevalue3" target="Element@21413266:1452319074876"/>
+<exit_state name="comparevalue4" target="Element@5282563:1452319087595"/>
+<exit_state name="comparevalue5" target="Element@5282563:1452319087595">
+<bendpoint>
+<dim1 x="159" y="262"/>
+<dim2 x="-232" y="165"/>
+</bendpoint>
+</exit_state>
+<exit_state name="comparevalue6" target="Element@5282563:1452319087595">
+<bendpoint>
+<dim1 x="188" y="187"/>
+<dim2 x="-203" y="90"/>
+</bendpoint>
+</exit_state>
+<exit_state name="novalue" target="Element@5282563:1452319087595">
+<bendpoint>
+<dim1 x="198" y="114"/>
+<dim2 x="-193" y="17"/>
+</bendpoint>
+</exit_state>
+<exit_state name="error" target="Element@12781990:1452334882610"/>
+</exit_states>
+</element>
+<element height="46" id="Element@3177782:1452319045505" name="ReadStatus3" type="Page Connector" width="114" x="186" y="556">
+<page_connector target="Element@24311367:1451650277705">ReadStatus3<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@24119742:1452319062001" name="FaxStatus1" type="Page Connector" width="105" x="-62" y="327">
+<page_connector target="Element@32517988:1451650458734">FaxStatus1<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@21413266:1452319074876" name="Main1" type="Page Connector" width="83" x="27" y="494">
+<page_connector target="Element@31912826:1451650108059">Main1<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@5282563:1452319087595" name="Transfer" type="Page Connector" width="93" x="714" y="445">
+<page_connector target="Element@20132617:1451650491260">Transfer<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@24162082:1452332835177" name="EviCore_ReadStatus9_Audio_PostApprovalMenu" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="303" x="207" y="131">
+<exit_states>
+<exit_state name="done" target="Element@10330562:1452318848504"/>
+</exit_states>
+</element>
+<element height="46" id="Element@12781990:1452334882610" name="EviCore_ReadStatus9_VDN_PostApprovalMenu" src="com.evi.main.elements.SetTransferVDN" type="Action Element" width="295" x="613" y="308">
+<exit_states>
+<exit_state name="done" target="Element@5282563:1452319087595"/>
 </exit_states>
 </element>
 </page>

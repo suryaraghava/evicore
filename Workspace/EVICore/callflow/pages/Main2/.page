@@ -2,7 +2,37 @@
 <page id="Page@28013106:1451650120135" name="Main2" version="6.0.1">
 <element height="46" id="Element@14048398:1451650120135" name="Main2" type="Page Entry" width="83" x="300" y="30">
 <exit_states>
-<exit_state name="next"/>
+<exit_state name="next" target="Element@8413210:1452283635503"/>
+</exit_states>
+</element>
+<element height="46" id="Element@8413210:1452283635503" name="EviCore_Main2_Dec_FaxOnlyMode" src="com.evi.main.elements.DecisionWith2Exits" type="Decision Element" width="253" x="211" y="124">
+<exit_states>
+<exit_state name="comparevalue1" target="Element@14801195:1452283659678"/>
+<exit_state name="comparevalue2" target="Element@15676021:1452283662008">
+<bendpoint>
+<dim1 x="185" y="132"/>
+<dim2 x="189" y="-94"/>
+</bendpoint>
+</exit_state>
+<exit_state name="novalue" target="Element@2433794:1452327167711"/>
+<exit_state name="error" target="Element@16495827:1452327171316"/>
+</exit_states>
+</element>
+<element height="46" id="Element@14801195:1452283659678" name="ReadStatus1" type="Page Connector" width="114" x="282" y="253">
+<page_connector target="Element@20383063:1451650254876">ReadStatus1<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@15676021:1452283662008" name="FaxStatus1" type="Page Connector" width="105" x="281" y="350">
+<page_connector target="Element@32517988:1451650458734">FaxStatus1<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2433794:1452327167711" name="Transfer" type="Page Connector" width="93" x="662" y="127">
+<page_connector target="Element@20132617:1451650491260">Transfer<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@16495827:1452327171316" name="EviCore_Main2_VDN_Error" src="com.evi.main.elements.SetTransferVDN" type="Action Element" width="187" x="611" y="236">
+<exit_states>
+<exit_state name="done" target="Element@2433794:1452327167711"/>
 </exit_states>
 </element>
 </page>

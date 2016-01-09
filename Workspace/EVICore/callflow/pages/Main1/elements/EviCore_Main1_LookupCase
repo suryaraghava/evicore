@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@6252010:1452282659999" name="EviCore_Main1_LookupCase" version="6.0.1">
+<config>
+<settings>
+<setting name="caseID">CaseID</setting>
+<setting name="taxID">TaxID</setting>
+</settings>
+</config>
+</decision_element>

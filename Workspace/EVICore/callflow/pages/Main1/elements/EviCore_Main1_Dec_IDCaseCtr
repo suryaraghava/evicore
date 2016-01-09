@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@28676338:1452336437707" name="EviCore_Main1_Dec_IDCaseCtr" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Decision_01" default_exit_state="No">
+        <exit_state name="Yes" conjugate="and">
+            <number operator="greater">
+                <data>
+                    <session name="IDCaseCtr" />
+                </data>
+                <constant_number value="2" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

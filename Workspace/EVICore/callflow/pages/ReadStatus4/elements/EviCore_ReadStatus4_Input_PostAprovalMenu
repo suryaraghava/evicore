@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@8182946:1452316575115" name="EviCore_ReadStatus4_Input_PostAprovalMenu" version="6.0.1">
+<config>
+<settings>
+<setting name="inputType">both</setting>
+<setting name="MaxErrors">3</setting>
+<setting name="confidence"/>
+<setting name="grammarSlot">out</setting>
+<setting name="dtmfGrammar">postapproval_dtmf.grxml</setting>
+<setting name="dtmfGrammar">mainmenu_dtmf.grxml</setting>
+<setting name="dtmfGrammar">agent_dtmf.grxml</setting>
+<setting name="speechGrammar">postapproval.grxml</setting>
+<setting name="speechGrammar">mainmenu.grxml</setting>
+<setting name="speechGrammar">agent.grxml</setting>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="Both">
+<audio_item name="silence" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="silence.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="nomatch_audio_group">
+<audio_item name="1009" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1009.wav"><![CDATA[I’m sorry, I didn’t understand you.]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="1052" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1052.wav"><![CDATA[Please say ‘repeat the details’ or press 1, ‘request a fax’ or press 2, ‘check another case’ or press 3, ‘main menu’ or press 9, or ‘agent’ or press 0]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="nomatch_audio_group">
+<audio_item name="1010" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1010.wav"><![CDATA[I’m sorry, I still didn’t understand you.]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="1053" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1053.wav"><![CDATA[Using your telephone’s keypad, please select one of the following. To repeat the details of this case, press 1. To have the details faxed to you, press 2. To check another case, press 3. To return to the main menu, press 9. To speak with an agent, press 0]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="1" name="noinput_audio_group">
+<audio_item name="1052" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1052.wav"><![CDATA[Please say ‘repeat the details’ or press 1, ‘request a fax’ or press 2, ‘check another case’ or press 3, ‘main menu’ or press 9, or ‘agent’ or press 0]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+<audio_group barge_in="true" count="2" name="noinput_audio_group">
+<audio_item name="1053" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1053.wav"><![CDATA[Using your telephone’s keypad, please select one of the following. To repeat the details of this case, press 1. To have the details faxed to you, press 2. To check another case, press 3. To return to the main menu, press 9. To speak with an agent, press 0]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@33005216:1452286369331" name="EviCore_ReadStatus2_SetSession_FaxOnly" version="6.0.1">
+<config>
+<settings>
+<setting name="SessionName">DoFax</setting>
+<setting name="SessionValue">TRUE</setting>
+</settings>
+</config>
+</action_element>

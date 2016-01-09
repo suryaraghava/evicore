@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@27899971:1452313563173" name="EviCore_ReadStatus3_Audio_EffDate" version="6.0.1">
+<config>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="1048" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1048.wav"><![CDATA[This authorization is effective]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="EffDate" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="ddmm" output_format="month_day" type="date">{Data.Session.EffDate}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="month_day" type="wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="1049" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1049.wav"><![CDATA[for one date of service and expires]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="ExpDate" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="ddmm" output_format="month_day" type="date">{Data.Session.ExpDate}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="month_day" type="wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

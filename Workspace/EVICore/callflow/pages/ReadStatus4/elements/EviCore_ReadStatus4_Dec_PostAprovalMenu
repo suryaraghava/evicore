@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@31446112:1452316787987" name="EviCore_ReadStatus4_Dec_PostAprovalMenu" version="6.0.1">
+<config>
+<settings>
+<setting name="SessionValue">{Data.Element.EviCore_ReadStatus4_Input_PostAprovalMenu.value}</setting>
+<setting name="comparevalue1">repeatthedetails</setting>
+<setting name="comparevalue2">fax</setting>
+<setting name="comparevalue3">anothercase</setting>
+<setting name="comparevalue4">mainmenu</setting>
+<setting name="comparevalue5">agent</setting>
+</settings>
+</config>
+</decision_element>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@4652224:1452329695206" name="EviCore_VerifyCaller1_Audio_ConfirmID" version="6.0.1">
+<config>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="1021" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1021.wav"><![CDATA[Would you like to use the same]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="inputValue" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{Data.Session.ID}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="1022" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="1022.wav"><![CDATA[number?]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

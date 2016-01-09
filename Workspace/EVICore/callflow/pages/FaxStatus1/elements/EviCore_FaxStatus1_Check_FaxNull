@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@24527855:1452319246368" name="EviCore_FaxStatus1_Check_FaxNull" version="6.0.1">
+<config>
+<settings>
+<setting name="SessionValue">FaxNumber</setting>
+</settings>
+<session_data>
+<data create_when="After" name="FirstFax">Yes</data>
+</session_data>
+</config>
+</decision_element>

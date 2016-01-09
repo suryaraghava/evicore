@@ -1,8 +1,72 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <page id="Page@7797881:1451650300055" name="ReadStatus5" version="6.0.1">
-<element height="46" id="Element@28936683:1451650300055" name="ReadStatus5" type="Page Entry" width="114" x="300" y="30">
+<element height="46" id="Element@28936683:1451650300055" name="ReadStatus5" type="Page Entry" width="114" x="385" y="25">
 <exit_states>
-<exit_state name="next"/>
+<exit_state name="next" target="Element@32686350:1452332333389"/>
 </exit_states>
+</element>
+<element height="46" id="Element@16645597:1452317278618" name="EviCore_ReadStatus5_Input_ApprovalFaxMenu" src="com.evi.main.elements.InputElement" type="Voice Element" width="293" x="296" y="185">
+<exit_states>
+<exit_state name="optionX" target="Element@3023161:1452317571465"/>
+<exit_state name="maxError" target="Element@24713264:1452335187445"/>
+</exit_states>
+</element>
+<element height="46" id="Element@3023161:1452317571465" name="EviCore_ReadStatus5_Dec_ApprovalFaxMenu" src="com.evi.main.elements.DecisionWith4Exits" type="Decision Element" width="285" x="300" y="283">
+<exit_states>
+<exit_state name="comparevalue1" target="Element@23897368:1452317618769"/>
+<exit_state name="comparevalue2" target="Element@22248180:1452317634663"/>
+<exit_state name="comparevalue3" target="Element@3393635:1452335210233">
+<bendpoint>
+<dim1 x="-271" y="42"/>
+<dim2 x="119" y="73"/>
+</bendpoint>
+</exit_state>
+<exit_state name="comparevalue4" target="Element@3393635:1452335210233"/>
+<exit_state name="novalue" target="Element@16924370:1452317577004"/>
+<exit_state name="error" target="Element@24713264:1452335187445"/>
+</exit_states>
+</element>
+<element height="46" id="Element@16924370:1452317577004" name="Transfer" type="Page Connector" width="93" x="743" y="283">
+<page_connector target="Element@20132617:1451650491260">Transfer<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@23897368:1452317618769" name="ReadStatus3" type="Page Connector" width="114" x="131" y="401">
+<page_connector target="Element@24311367:1451650277705">ReadStatus3<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@22248180:1452317634663" name="EviCore_ReadStatus5_Check_FirstFax" src="com.evi.main.elements.IsEqual" type="Decision Element" width="241" x="326" y="400">
+<exit_states>
+<exit_state name="equal" target="Element@13790116:1452317661599"/>
+<exit_state name="notequal" target="Element@32161256:1452317663154"/>
+<exit_state name="error" target="Element@24713264:1452335187445"/>
+</exit_states>
+</element>
+<element height="46" id="Element@13790116:1452317661599" name="EviCore_ReadStatus5_Audio_FirstFaxYes" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="258" x="317" y="491">
+<exit_states>
+<exit_state name="done" target="Element@25774083:1452317727036"/>
+</exit_states>
+</element>
+<element height="46" id="Element@32161256:1452317663154" name="EviCore_ReadStatus5_Audio_FirstFaxNo" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="256" x="322" y="593">
+<exit_states>
+<exit_state name="done" target="Element@25774083:1452317727036"/>
+</exit_states>
+</element>
+<element height="46" id="Element@25774083:1452317727036" name="FaxStatus1" type="Page Connector" width="105" x="395" y="711">
+<page_connector target="Element@32517988:1451650458734">FaxStatus1<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@32686350:1452332333389" name="EviCore_ReadStatus5_Audio_ApprovalFaxMenu" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="297" x="297" y="104">
+<exit_states>
+<exit_state name="done" target="Element@16645597:1452317278618"/>
+</exit_states>
+</element>
+<element height="46" id="Element@24713264:1452335187445" name="EviCore_ReadStatus5_VDN_FirstFax" src="com.evi.main.elements.SetTransferVDN" type="Action Element" width="232" x="731" y="383">
+<exit_states>
+<exit_state name="done" target="Element@16924370:1452317577004"/>
+</exit_states>
+</element>
+<element height="46" id="Element@3393635:1452335210233" name="Transfer" type="Page Connector" width="93" x="17" y="242">
+<page_connector target="Element@20132617:1451650491260">Transfer<config/>
+</page_connector>
 </element>
 </page>

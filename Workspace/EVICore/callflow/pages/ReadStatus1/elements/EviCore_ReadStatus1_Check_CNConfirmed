@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@32421778:1452283724941" name="EviCore_ReadStatus1_Check_CNConfirmed" version="6.0.1">
+<config>
+<settings>
+<setting name="SessionValue">CNConfimred</setting>
+<setting name="comparevalue1">TRUE</setting>
+</settings>
+</config>
+</decision_element>

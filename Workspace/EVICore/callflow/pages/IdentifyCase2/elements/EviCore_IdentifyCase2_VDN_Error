@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@17790353:1452278912095" name="EviCore_IdentifyCase2_VDN_Error" version="6.0.1">
+<config>
+<settings>
+<setting name="transferType">errorVDN</setting>
+</settings>
+</config>
+</action_element>

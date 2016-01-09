@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@8852885:1452319747691" name="EviCore_FaxStatus1_Check_EntFaxNum" version="6.0.1">
+<config>
+<settings>
+<setting name="SessionValue">EntFaxNum</setting>
+</settings>
+</config>
+</decision_element>

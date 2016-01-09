@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@21391169:1452280751883" name="EviCore_IdentifyCase3_Dec_AuthNumConf" version="6.0.1">
+<config>
+<settings>
+<setting name="defaultMidConfidence">{Data.Session.midConfidence}</setting>
+<setting name="formConfidence">{Data.Element.EviCore_IdentifyCase3_Dec_AuthNumDonno.confidence}</setting>
+</settings>
+</config>
+</decision_element>

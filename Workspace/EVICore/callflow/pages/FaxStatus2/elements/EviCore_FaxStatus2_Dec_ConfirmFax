@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@20495039:1452321199301" name="EviCore_FaxStatus2_Dec_ConfirmFax" version="6.0.1">
+<config>
+<settings>
+<setting name="SessionValue">{Data.Element.EviCore_FaxStatus2_Input_ConfirmFax.value}</setting>
+<setting name="comparevalue1">Yes</setting>
+<setting name="comparevalue2">No</setting>
+</settings>
+</config>
+</decision_element>

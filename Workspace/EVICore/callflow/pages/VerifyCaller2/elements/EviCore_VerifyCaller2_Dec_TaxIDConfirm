@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@25722405:1452316355658" name="EviCore_VerifyCaller2_Dec_TaxIDConfirm" version="6.0.1">
+<config>
+<settings>
+<setting name="SessionValue">{Data.Element.EviCore_VerifyCaller2_Input_TaxIDConfirm.value}</setting>
+<setting name="comparevalue1">Yes</setting>
+<setting name="comparevalue2">No</setting>
+</settings>
+</config>
+</decision_element>

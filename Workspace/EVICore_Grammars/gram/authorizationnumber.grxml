@@ -46,6 +46,7 @@
                 <tag>SWI_meaning='authorization';  </tag>
 				<one-of>
 					<item> authorization number </item> 
+					<item>look up by authorization number</item>
 				</one-of>
             </item>
             

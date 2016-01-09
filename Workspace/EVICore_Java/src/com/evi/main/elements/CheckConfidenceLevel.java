@@ -19,7 +19,7 @@ public class CheckConfidenceLevel extends DecisionElementBase implements Element
 		String statusFlag = IVRConstants.error;
 		try{
 		DecisionElementConfig config = decisionData.getDecisionElementConfig();
-		Integer defaultConfidenceValue = Integer.valueOf((String) config.getSettingValue(IVRConstants.defaultMidConfidence, decisionData));
+		Integer defaultConfidenceValue = Integer.valueOf((String) decisionData.getSessionData(IVRConstants.defaultMidConfidence));
 		Integer formConfidence = Integer.valueOf((String) config.getSettingValue(IVRConstants.formConfidence, decisionData));
 		
 		if(formConfidence<defaultConfidenceValue){
@@ -48,16 +48,7 @@ public class CheckConfidenceLevel extends DecisionElementBase implements Element
 	}
 	
 	public Setting[] getSettings() throws ElementException{
-		Setting[] settingArray = new Setting[2];
-		
-		settingArray[0] = new Setting(
-				IVRConstants.defaultMidConfidence,
-				IVRConstants.defaultMidConfidence,
-				"value",
-				Setting.REQUIRED,
-				Setting.SINGLE,
-				Setting.SUBSTITUTION_ALLOWED,
-				Setting.STRING);
+		Setting[] settingArray = new Setting[1];
 		
 		settingArray[1] = new Setting(
 				IVRConstants.formConfidence,

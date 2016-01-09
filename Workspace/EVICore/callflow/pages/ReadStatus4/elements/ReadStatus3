@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@26760726:1452316968221" name="ReadStatus3" version="6.0.1">
+<page_connector target="Element@24311367:1451650277705">ReadStatus3<config/>
+</page_connector>
+</connector>

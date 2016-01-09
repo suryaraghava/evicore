@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <page id="Page@5685187:1451650127846" name="IdentifyCase1" version="6.0.1">
-<element height="46" id="Element@21474513:1451650127846" name="IdentifyCase1" type="Page Entry" width="121" x="300" y="30">
+<element height="46" id="Element@21474513:1451650127846" name="IdentifyCase1" type="Page Entry" width="121" x="315" y="32">
 <exit_states>
 <exit_state name="next" target="Element@14805406:1451652497298"/>
 </exit_states>
@@ -9,21 +9,30 @@
 <exit_states>
 <exit_state name="comparevalue1" target="Element@33112162:1451652620026"/>
 <exit_state name="comparevalue2" target="Element@23032534:1451652579229"/>
-<exit_state name="novalue"/>
-<exit_state name="error"/>
+<exit_state name="novalue" target="Element@23606200:1452278697083"/>
+<exit_state name="error" target="Element@27447712:1452278693601"/>
 </exit_states>
 </element>
-<element height="46" id="Element@23032534:1451652579229" name="IdentifyCase2" type="Page Connector" width="121" x="352" y="349">
+<element height="46" id="Element@23032534:1451652579229" name="IdentifyCase2" type="Page Connector" width="121" x="317" y="314">
 <page_connector target="Element@20873989:1451650149640">IdentifyCase2<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@33112162:1451652620026" name="SetValuesToSession_01" src="com.evi.main.elements.SetValuesToSession" type="Action Element" width="170" x="648" y="213">
+<element height="46" id="Element@33112162:1451652620026" name="EviCore_IdentifyCase1_setSession_UseUUICase" src="com.evi.main.elements.SetValuesToSession" type="Action Element" width="293" x="621" y="185">
 <exit_states>
 <exit_state name="done" target="Element@10334424:1451652635138"/>
 </exit_states>
 </element>
-<element height="46" id="Element@10334424:1451652635138" name="VerifyCaller1" type="Page Connector" width="116" x="749" y="331">
+<element height="46" id="Element@10334424:1451652635138" name="VerifyCaller1" type="Page Connector" width="116" x="710" y="307">
 <page_connector target="Element@1415872:1451650225760">VerifyCaller1<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@27447712:1452278693601" name="EviCore_IdentifyCase1_VDN_Error" src="com.evi.main.elements.SetTransferVDN" type="Action Element" width="225" x="-42" y="288">
+<exit_states>
+<exit_state name="done" target="Element@23606200:1452278697083"/>
+</exit_states>
+</element>
+<element height="46" id="Element@23606200:1452278697083" name="Transfer" type="Page Connector" width="93" x="29" y="174">
+<page_connector target="Element@20132617:1451650491260">Transfer<config/>
 </page_connector>
 </element>
 </page>

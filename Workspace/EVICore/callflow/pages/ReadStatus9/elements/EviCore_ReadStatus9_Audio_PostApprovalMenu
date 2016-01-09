@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@24162082:1452332835177" name="EviCore_ReadStatus9_Audio_PostApprovalMenu" version="6.0.1">
+<config>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri=""><![CDATA[DistributePlease say ‘repeat the details’, ‘request a fax’, ‘check another case’ or ‘take a survey’. You may also say ‘main menu’ or ‘agent’. <2s> If you are done, you may hang up at any time.]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@25759499:1452315683045" name="EviCore_VerifyCaller2_Check_TaxIDConf" version="6.0.1">
+<config>
+<settings>
+<setting name="defaultMidConfidence">midConfidence</setting>
+<setting name="formConfidence">{Data.Element.EviCore_VerifyCaller2_Input_TaxID.value}</setting>
+</settings>
+</config>
+</decision_element>

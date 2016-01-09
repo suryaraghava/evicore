@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@23820290:1452330247725" name="EviCore_VerifyCaller2_SetSession_TaxID" version="6.0.1">
+<config>
+<settings>
+<setting name="SessionName">EntTaxID</setting>
+<setting name="SessionValue">{Data.Element.EviCore_VerifyCaller2_Input_TaxID.value}</setting>
+</settings>
+</config>
+</action_element>

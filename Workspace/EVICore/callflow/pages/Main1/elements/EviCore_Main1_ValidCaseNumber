@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@30216093:1452283190811" name="EviCore_Main1_ValidCaseNumber" version="6.0.1">
+<config>
+<settings>
+<setting name="SessionValue">CaseNumberValid</setting>
+<setting name="comparevalue1">Yes</setting>
+</settings>
+</config>
+</decision_element>

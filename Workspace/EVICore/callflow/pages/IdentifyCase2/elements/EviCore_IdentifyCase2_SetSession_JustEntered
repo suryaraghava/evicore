@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@29338387:1452330056679" name="EviCore_IdentifyCase2_SetSession_JustEntered" version="6.0.1">
+<config>
+<settings>
+<setting name="SessionName">JustEnteredCase</setting>
+<setting name="SessionValue">Yes</setting>
+</settings>
+</config>
+</action_element>

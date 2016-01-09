@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@20489064:1452314138852" name="EviCore_ReadStatus3_Check_DoFax" version="6.0.1">
+<config>
+<settings>
+<setting name="SessionValue">DoFax</setting>
+<setting name="comparevalue1">TRUE</setting>
+</settings>
+</config>
+</decision_element>

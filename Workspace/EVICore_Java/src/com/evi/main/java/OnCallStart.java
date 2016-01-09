@@ -11,6 +11,7 @@ import com.audium.server.AudiumException;
 import com.audium.server.proxy.StartCallInterface;
 import com.audium.server.session.CallStartAPI;
 import com.evi.main.common.IVRConstants;
+import com.evi.main.utils.IVRUtils;
 
 
 public class OnCallStart implements StartCallInterface{
@@ -28,35 +29,30 @@ public class OnCallStart implements StartCallInterface{
 					InputStream props = null;        
 			        try {            
 			            props = OnCallStart.class.getResourceAsStream(propFileName);  
+			            appProperties.load(props);  
 			            logger.debug("Properties read: "+props);
 			        } catch (Exception e) {
 			            logger.error("[OnCallStart] error opening servicingIvr.properties file",e);
 			        }
-			        String hostname = null;
-			        try {
-			            InetAddress addr = InetAddress.getLocalHost();        
-			            hostname = addr.getHostName().toLowerCase();
+			              
+			            callStart.setSessionData(IVRConstants.applicationProperties, appProperties);
 			            
-			            callStart.addToLog(IVRConstants.hostname,hostname);
-			            callStart.setSessionData(IVRConstants.hostname, hostname);
-			        } catch (UnknownHostException ue) {
-			            logger.error("[OnCallStart] Error getting hostname",ue);
-			            hostname="Default";
-			        }
-			        
-			            appProperties.load(props);    
-			            callStart.setSessionData("Application_Properties", appProperties);
+			            String audioPath = IVRUtils.getPropertyValue(appProperties, IVRConstants.audioPath);
+			            IVRUtils.setSessionDataAndLogAppLogAndLog4j(callStart, IVRConstants.audioPath, audioPath);
 			            
-			            String audioPath = appProperties.getProperty(IVRConstants.audioPath);
+			            String applicationMode = IVRUtils.getPropertyValue(appProperties, IVRConstants.applicationMode);
+			            IVRUtils.setSessionDataAndLogAppLogAndLog4j(callStart, IVRConstants.applicationMode, applicationMode);
 			            
-			            callStart.setSessionData(IVRConstants.audioPath, audioPath);
+			            String midConfidence = IVRUtils.getPropertyValue(appProperties, IVRConstants.defaultMidConfidence);
+			    		IVRUtils.setSessionDataAndLogAppLogAndLog4j(callStart, IVRConstants.defaultMidConfidence, midConfidence);
 			            
+			            if("test".equalsIgnoreCase(applicationMode)){
+			            	IVRUtils.loadAllTestData(callStart,appProperties);
+			            }
 			            
 				}
 				catch(Exception e){
-					
-				
+									
 				}
 	}
-
 }

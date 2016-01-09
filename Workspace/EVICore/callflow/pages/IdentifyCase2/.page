@@ -1,32 +1,107 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <page id="Page@21347346:1451650149640" name="IdentifyCase2" version="6.0.1">
-<element height="46" id="Element@20873989:1451650149640" name="IdentifyCase2" type="Page Entry" width="121" x="300" y="30">
+<element height="46" id="Element@20873989:1451650149640" name="IdentifyCase2" type="Page Entry" width="121" x="367" y="10">
 <exit_states>
-<exit_state name="next" target="Element@8873478:1452193722429"/>
+<exit_state name="next" target="Element@19613087:1452327450479"/>
 </exit_states>
 </element>
-<element height="46" id="Element@8873478:1452193722429" name="EviCore_IdentifyCase1_Input_CaseID" src="com.evi.main.elements.InputElement" type="Voice Element" width="240" x="301" y="193">
+<element height="46" id="Element@8873478:1452193722429" name="EviCore_IdentifyCase2_Input_CaseID" src="com.evi.main.elements.InputElement" type="Voice Element" width="240" x="301" y="193">
 <exit_states>
-<exit_state name="optionX" target="Element@2213401:1452194596455"/>
-<exit_state name="maxError"/>
+<exit_state name="optionX" target="Element@8492480:1452327531466"/>
+<exit_state name="maxError" target="Element@10549532:1452278892675"/>
 </exit_states>
 </element>
-<element height="46" id="Element@2213401:1452194596455" name="EviCore_IdentifyCase2_Dec_Authorization" src="com.evi.main.elements.IsEqual" type="Decision Element" width="268" x="164" y="295">
+<element height="46" id="Element@2213401:1452194596455" name="EviCore_IdentifyCase2_Dec_Authorization" src="com.evi.main.elements.IsEqual" type="Decision Element" width="268" x="286" y="384">
 <exit_states>
 <exit_state name="equal" target="Element@5111778:1452194649102"/>
 <exit_state name="notequal" target="Element@6589112:1452194681437"/>
-<exit_state name="error"/>
+<exit_state name="error" target="Element@17790353:1452278912095"/>
 </exit_states>
 </element>
-<element height="46" id="Element@5111778:1452194649102" name="IdentifyCase3" type="Page Connector" width="121" x="513" y="339">
+<element height="46" id="Element@5111778:1452194649102" name="IdentifyCase3" type="Page Connector" width="121" x="27" y="389">
 <page_connector target="Element@24710577:1451650167364">IdentifyCase3<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@6589112:1452194681437" name="EviCore_IdentifyCase2_Dec_CheckConfidence" src="com.evi.main.elements.CheckConfidenceLevel" type="Decision Element" width="290" x="159" y="403">
+<element height="46" id="Element@6589112:1452194681437" name="EviCore_IdentifyCase2_Dec_CheckConfidence" src="com.evi.main.elements.CheckConfidenceLevel" type="Decision Element" width="290" x="271" y="482">
 <exit_states>
-<exit_state name="highConfidence"/>
-<exit_state name="lowConfidence"/>
-<exit_state name="error"/>
+<exit_state name="highConfidence" target="Element@15545310:1452279067585"/>
+<exit_state name="lowConfidence" target="Element@33027097:1452328196804"/>
+<exit_state name="error" target="Element@17790353:1452278912095"/>
+</exit_states>
+</element>
+<element height="46" id="Element@10549532:1452278892675" name="Transfer" type="Page Connector" width="93" x="710" y="193">
+<page_connector target="Element@20132617:1451650491260">Transfer<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@17790353:1452278912095" name="EviCore_IdentifyCase2_VDN_Error" src="com.evi.main.elements.SetTransferVDN" type="Action Element" width="225" x="643" y="376">
+<exit_states>
+<exit_state name="done" target="Element@10549532:1452278892675"/>
+</exit_states>
+</element>
+<element height="46" id="Element@15545310:1452279067585" name="EviCore_IdentifyCase2_Audio_HighConfidence" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="299" x="266" y="601">
+<exit_states>
+<exit_state name="done" target="Element@29338387:1452330056679"/>
+</exit_states>
+</element>
+<element height="46" id="Element@8617453:1452279125138" name="VerifyCaller1" type="Page Connector" width="116" x="-11" y="515">
+<page_connector target="Element@1415872:1451650225760">VerifyCaller1<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@20447275:1452279192002" name="EviCore_IdentifyCase2_Input_CaseIDConfirm" src="com.evi.main.elements.InputElement" type="Voice Element" width="284" x="253" y="805">
+<exit_states>
+<exit_state name="optionX" target="Element@32530325:1452279855093"/>
+<exit_state name="maxError" target="Element@29013983:1452328442550"/>
+</exit_states>
+</element>
+<element height="46" id="Element@20493513:1452279793126" name="EviCore_IdentifyCase2_SetSession_CNConfirmed" src="com.evi.main.elements.SetValuesToSession" type="Action Element" width="305" x="244" y="1007">
+<exit_states>
+<exit_state name="done" target="Element@15545310:1452279067585"/>
+</exit_states>
+</element>
+<element height="46" id="Element@32530325:1452279855093" name="EviCore_IdentifyCase2_Dec_CaseIDConfirm" src="com.evi.main.elements.DecisionWith2Exits" type="Decision Element" width="276" x="261" y="906">
+<exit_states>
+<exit_state name="comparevalue1" target="Element@20493513:1452279793126"/>
+<exit_state name="comparevalue2" target="Element@8873478:1452193722429">
+<bendpoint>
+<dim1 x="-157" y="-51"/>
+<dim2 x="-179" y="662"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-146" y="-628"/>
+<dim2 x="-184" y="85"/>
+</bendpoint>
+</exit_state>
+<exit_state name="novalue" target="Element@20784830:1452328442550"/>
+<exit_state name="error" target="Element@29013983:1452328442550"/>
+</exit_states>
+</element>
+<element height="46" id="Element@19613087:1452327450479" name="EviCore_IdentifyCase2_Audio_CaseID" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="244" x="305" y="100">
+<exit_states>
+<exit_state name="done" target="Element@8873478:1452193722429"/>
+</exit_states>
+</element>
+<element height="46" id="Element@8492480:1452327531466" name="EviCore_IdentifyCase2_SetSession_CaseID" src="com.evi.main.elements.SetValuesToSession" type="Action Element" width="267" x="287" y="286">
+<exit_states>
+<exit_state name="done" target="Element@2213401:1452194596455"/>
+</exit_states>
+</element>
+<element height="46" id="Element@33027097:1452328196804" name="EviCore_IdentifyCase2_Audio_LowConfidence" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="291" x="246" y="698">
+<exit_states>
+<exit_state name="done" target="Element@20447275:1452279192002"/>
+</exit_states>
+</element>
+<element height="46" id="Element@29013983:1452328442550" name="EviCore_IdentifyCase2_VDN_Error1" src="com.evi.main.elements.SetTransferVDN" type="Action Element" width="231" x="712" y="807">
+<exit_states>
+<exit_state name="done" target="Element@20784830:1452328442550"/>
+</exit_states>
+</element>
+<element height="46" id="Element@20784830:1452328442550" name="Transfer" type="Page Connector" width="93" x="781" y="908">
+<page_connector target="Element@20132617:1451650491260">Transfer<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@29338387:1452330056679" name="EviCore_IdentifyCase2_SetSession_JustEntered" src="com.evi.main.elements.SetValuesToSession" type="Action Element" width="291" x="-92" y="609">
+<exit_states>
+<exit_state name="done" target="Element@8617453:1452279125138"/>
 </exit_states>
 </element>
 </page>
