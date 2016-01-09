@@ -2,11 +2,11 @@
 <decision_element id="Element@9386789:1452321799041" name="EviCore_Transfer_CheckReason" version="6.0.1">
 <config>
 <settings>
-<setting name="SessionValue">Reason</setting>
-<setting name="comparevalue1">Error</setting>
-<setting name="comparevalue2">agent</setting>
-<setting name="comparevalue3">nurse</setting>
-<setting name="comparevalue4">survey</setting>
+<setting name="SessionValue">trasnferType</setting>
+<setting name="comparevalue1">errorVDN</setting>
+<setting name="comparevalue2">agentReqVDN</setting>
+<setting name="comparevalue3">nurseLineVDN</setting>
+<setting name="comparevalue4">surveyVDN</setting>
 </settings>
 </config>
 </decision_element>

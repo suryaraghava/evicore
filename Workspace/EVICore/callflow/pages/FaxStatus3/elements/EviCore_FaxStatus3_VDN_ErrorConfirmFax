@@ -2,7 +2,7 @@
 <action_element id="Element@12915302:1452360732889" name="EviCore_FaxStatus3_VDN_ErrorConfirmFax" version="6.0.1">
 <config>
 <settings>
-<setting name="transferType"/>
+<setting name="transferType">errorVDN</setting>
 </settings>
 </config>
 </action_element>

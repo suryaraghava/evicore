@@ -28,6 +28,7 @@ public class SetTransferVDN extends ActionElementBase implements ElementInterfac
 			
 			String transferVDN = IVRUtils.getPropertyValue(prop, vdn);
 			
+			IVRUtils.setSessionDataAndLogAppLogAndLog4j(actionData, IVRConstants.transferType, vdn);
 			IVRUtils.setSessionDataAndLogAppLogAndLog4j(actionData, IVRConstants.transferVDN, transferVDN);
 			
 			}

@@ -33,6 +33,7 @@ public class IVRConstants {
 	
 	public static String transferType= "transferType";
 	public static String transferVDN = "transferVDN";
+	public static String transferReason = "trasnferReason";
 	
 	public static String errorVDN = "errorVDN";
 	public static String agentReqVDN = "agentReqVDN";
