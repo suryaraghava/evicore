@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@19220471:1452359589433" name="EviCore_ReadStatus4_VDN_PostAprovalMenuAgent" version="6.0.1">
+<config>
+<settings>
+<setting name="transferType">mainMenuVDN</setting>
+</settings>
+</config>
+</action_element>

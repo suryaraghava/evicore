@@ -17,12 +17,7 @@
 <exit_state name="comparevalue2" target="Element@18945321:1452286306415"/>
 <exit_state name="comparevalue3" target="Element@22134028:1452286396261"/>
 <exit_state name="novalue" target="Element@2450125:1452286206860"/>
-<exit_state name="error" target="Element@28276827:1452331598651">
-<bendpoint>
-<dim1 x="206" y="-8"/>
-<dim2 x="-110" y="46"/>
-</bendpoint>
-</exit_state>
+<exit_state name="error" target="Element@4805065:1452359350119"/>
 </exit_states>
 </element>
 <element height="46" id="Element@2450125:1452286206860" name="Transfer" type="Page Connector" width="93" x="669" y="298">
@@ -52,9 +47,18 @@
 <exit_state name="done" target="Element@16719031:1452285904175"/>
 </exit_states>
 </element>
-<element height="46" id="Element@28276827:1452331598651" name="EviCore_ReadStatus2_VDN_DetailsMenuError" src="com.evi.main.elements.SetTransferVDN" type="Action Element" width="284" x="573" y="206">
+<element height="46" id="Element@28276827:1452331598651" name="EviCore_ReadStatus2_VDN_DetailsMenu" src="com.evi.main.elements.SetTransferVDN" type="Action Element" width="284" x="573" y="206">
 <exit_states>
 <exit_state name="done" target="Element@2450125:1452286206860"/>
 </exit_states>
+</element>
+<element height="46" id="Element@4805065:1452359350119" name="EviCore_ReadStatus2_Dec_ErrorVDN" src="com.evi.main.elements.SetTransferVDN" type="Action Element" width="238" x="-102" y="296">
+<exit_states>
+<exit_state name="done" target="Element@16448693:1452359391710"/>
+</exit_states>
+</element>
+<element height="46" id="Element@16448693:1452359391710" name="Transfer" type="Page Connector" width="93" x="-29" y="185">
+<page_connector target="Element@20132617:1451650491260">Transfer<config/>
+</page_connector>
 </element>
 </page>

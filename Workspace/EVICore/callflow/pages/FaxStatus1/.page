@@ -50,7 +50,7 @@
 <element height="46" id="Element@10096755:1452319747691" name="EviCore_FaxStatus1_Input_EntFaxNum" src="com.evi.main.elements.InputElement" type="Voice Element" width="251" x="247" y="682">
 <exit_states>
 <exit_state name="optionX" target="Element@11406093:1452319747691"/>
-<exit_state name="maxError" target="Element@19945:1452334721043"/>
+<exit_state name="maxError" target="Element@8820955:1452360531727"/>
 </exit_states>
 </element>
 <element height="46" id="Element@8852885:1452319747691" name="EviCore_FaxStatus1_Check_EntFaxNum" src="com.evi.main.elements.IsNullorEmpty" type="Decision Element" width="254" x="248" y="514">
@@ -75,7 +75,7 @@
 <page_connector target="Element@20132617:1451650491260">Transfer<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@13667442:1452320062040" name="Transfer" type="Page Connector" width="93" x="952" y="294">
+<element height="46" id="Element@13667442:1452320062040" name="Transfer" type="Page Connector" width="93" x="698" y="221">
 <page_connector target="Element@20132617:1451650491260">Transfer<config/>
 </page_connector>
 </element>
@@ -95,6 +95,11 @@
 </exit_states>
 </element>
 <element height="46" id="Element@19945:1452334721043" name="EviCore_FaxStatus1_VDN_EntFaxNum" src="com.evi.main.elements.SetTransferVDN" type="Action Element" width="245" x="661" y="676">
+<exit_states>
+<exit_state name="done" target="Element@5008466:1452320037778"/>
+</exit_states>
+</element>
+<element height="46" id="Element@8820955:1452360531727" name="EviCore_FaxStatus1_VDN_EntFaxNum_MaxError" src="com.evi.main.elements.SetTransferVDN" type="Action Element" width="305" x="-134" y="786">
 <exit_states>
 <exit_state name="done" target="Element@5008466:1452320037778"/>
 </exit_states>

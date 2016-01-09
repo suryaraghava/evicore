@@ -2,7 +2,7 @@
 <action_element id="Element@4359339:1452335282592" name="EviCore_ReadStatus4_VDN_PostAprovalMenu" version="6.0.1">
 <config>
 <settings>
-<setting name="transferType">errorVDN</setting>
+<setting name="transferType">timeoutVDN</setting>
 </settings>
 </config>
 </action_element>

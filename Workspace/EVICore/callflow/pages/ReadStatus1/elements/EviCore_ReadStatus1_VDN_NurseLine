@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@5086450:1452359183527" name="EviCore_ReadStatus1_VDN_NurseLine" version="6.0.1">
+<config>
+<settings>
+<setting name="transferType">nurseLineVDN</setting>
+</settings>
+</config>
+</action_element>

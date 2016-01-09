@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <page id="Page@13773450:1451650108059" name="Main1" version="6.0.1">
-<element height="46" id="Element@31912826:1451650108059" name="Main1" type="Page Entry" width="83" x="300" y="30">
+<element height="46" id="Element@31912826:1451650108059" name="Main1" type="Page Entry" width="83" x="300" y="63">
 <exit_states>
 <exit_state name="next" target="Element@18460987:1451651569980"/>
 </exit_states>

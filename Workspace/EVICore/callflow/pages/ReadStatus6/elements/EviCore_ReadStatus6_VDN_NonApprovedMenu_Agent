@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@13504530:1452359930496" name="EviCore_ReadStatus6_VDN_NonApprovedMenu_Agent" version="6.0.1">
+<config>
+<settings>
+<setting name="transferType">agentReqVDN</setting>
+</settings>
+</config>
+</action_element>
