@@ -10,6 +10,7 @@ import com.audium.server.voiceElement.ExitState;
 import com.audium.server.voiceElement.Setting;
 import com.audium.server.xml.DecisionElementConfig;
 import com.evi.main.common.IVRConstants;
+import com.evi.main.utils.IVRUtils;
 
 public class CheckConfidenceLevel extends DecisionElementBase implements ElementInterface{
 	private static Logger logger = Logger.getLogger(CheckConfidenceLevel.class);
@@ -21,6 +22,9 @@ public class CheckConfidenceLevel extends DecisionElementBase implements Element
 		DecisionElementConfig config = decisionData.getDecisionElementConfig();
 		Integer defaultConfidenceValue = Integer.valueOf((String) decisionData.getSessionData(IVRConstants.defaultMidConfidence));
 		Integer formConfidence = Integer.valueOf((String) config.getSettingValue(IVRConstants.formConfidence, decisionData));
+		
+		IVRUtils.logAppLogAndLog4j(name, IVRConstants.defaultMidConfidence, defaultConfidenceValue.toString(), decisionData);
+		IVRUtils.logAppLogAndLog4j(name, IVRConstants.formConfidence, formConfidence.toString(), decisionData);
 		
 		if(formConfidence<defaultConfidenceValue){
 			statusFlag = IVRConstants.lowConfidence;

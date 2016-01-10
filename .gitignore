@@ -1,1 +1,5 @@
 Workspace/.metadata/
+Workspace/EVICore/.svn/
+*.svn-base
+Workspace/EVICore_Grammars/.svn/
+Workspace/EVICore_Java/.svn/
