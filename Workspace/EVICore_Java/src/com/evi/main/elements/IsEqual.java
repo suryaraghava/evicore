@@ -10,6 +10,7 @@ import com.audium.server.voiceElement.ExitState;
 import com.audium.server.voiceElement.Setting;
 import com.audium.server.xml.DecisionElementConfig;
 import com.evi.main.common.IVRConstants;
+import com.evi.main.utils.IVRUtils;
 
 public class IsEqual extends DecisionElementBase implements ElementInterface{
 	private static Logger logger = Logger.getLogger(IsEqual.class);
@@ -23,8 +24,8 @@ public class IsEqual extends DecisionElementBase implements ElementInterface{
 		String value = (String) decisionData.getSessionData(sessionValue);
 		String comparevalue1 = (String) config.getSettingValue(IVRConstants.comparevalue1, decisionData);
 		
-		logger.debug("value: "+value);
-		logger.debug("Comp1: "+comparevalue1);
+		IVRUtils.logAppLogAndLog4j(name, IVRConstants.SessionValue, sessionValue, decisionData);
+		IVRUtils.logAppLogAndLog4j(name, IVRConstants.comparevalue1, comparevalue1, decisionData);
 		
 		if(null!=value){
 			if(value.equalsIgnoreCase(comparevalue1)){
@@ -41,6 +42,8 @@ public class IsEqual extends DecisionElementBase implements ElementInterface{
 		catch(Exception e){
 			logger.error("Exception",e);
 		}
+		
+		IVRUtils.logAppLogAndLog4j(name, "StatusFlag", flag, decisionData);
 		return flag;
 	}
 	

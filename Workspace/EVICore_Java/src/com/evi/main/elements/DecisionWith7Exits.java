@@ -10,6 +10,7 @@ import com.audium.server.voiceElement.ExitState;
 import com.audium.server.voiceElement.Setting;
 import com.audium.server.xml.DecisionElementConfig;
 import com.evi.main.common.IVRConstants;
+import com.evi.main.utils.IVRUtils;
 
 public class DecisionWith7Exits extends DecisionElementBase implements ElementInterface{
 	private static Logger logger = Logger.getLogger(DecisionWith7Exits.class);
@@ -29,9 +30,14 @@ public class DecisionWith7Exits extends DecisionElementBase implements ElementIn
 		String comparevalue6 = (String) config.getSettingValue(IVRConstants.comparevalue6, decisionData);
 		String comparevalue7 = (String) config.getSettingValue(IVRConstants.comparevalue7, decisionData);
 		
-		logger.debug("value: "+value);
-		logger.debug("Comp1: "+comparevalue1);
-		logger.debug("Comp2: "+comparevalue2);
+		IVRUtils.logAppLogAndLog4j(name, IVRConstants.SessionValue, sessionValue, decisionData);
+		IVRUtils.logAppLogAndLog4j(name, IVRConstants.comparevalue1, comparevalue1, decisionData);
+		IVRUtils.logAppLogAndLog4j(name, IVRConstants.comparevalue2, comparevalue2, decisionData);
+		IVRUtils.logAppLogAndLog4j(name, IVRConstants.comparevalue3, comparevalue3, decisionData);
+		IVRUtils.logAppLogAndLog4j(name, IVRConstants.comparevalue4, comparevalue4, decisionData);
+		IVRUtils.logAppLogAndLog4j(name, IVRConstants.comparevalue5, comparevalue5, decisionData);
+		IVRUtils.logAppLogAndLog4j(name, IVRConstants.comparevalue6, comparevalue6, decisionData);
+		IVRUtils.logAppLogAndLog4j(name, IVRConstants.comparevalue7, comparevalue7, decisionData);
 		
 		if(null!=value){
 			if(value.equalsIgnoreCase(comparevalue1)){
@@ -67,6 +73,8 @@ public class DecisionWith7Exits extends DecisionElementBase implements ElementIn
 		catch(Exception e){
 			logger.error("Exception",e);
 		}
+		
+		IVRUtils.logAppLogAndLog4j(name, "StatusFlag", flag, decisionData);
 		return flag;
 	}
 	

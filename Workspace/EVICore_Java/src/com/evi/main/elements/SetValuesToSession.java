@@ -9,6 +9,7 @@ import com.audium.server.voiceElement.ElementInterface;
 import com.audium.server.voiceElement.Setting;
 import com.audium.server.xml.ActionElementConfig;
 import com.evi.main.common.IVRConstants;
+import com.evi.main.utils.IVRUtils;
 
 public class SetValuesToSession extends ActionElementBase implements ElementInterface{
 	private static Logger logger = Logger.getLogger(SetValuesToSession.class);
@@ -18,10 +19,14 @@ public class SetValuesToSession extends ActionElementBase implements ElementInte
 		ActionElementConfig config = actionData.getActionElementConfig();
 		
 		String sessionName = (String) config.getSettingValue(IVRConstants.SessionName, actionData);
-		String SessionValue = (String) config.getSettingValue(IVRConstants.SessionValue, actionData);
+		String sessionValue = (String) config.getSettingValue(IVRConstants.SessionValue, actionData);
 		
 		logger.debug("Name: "+sessionName);
-		logger.debug("Value: "+SessionValue);
+		logger.debug("Value: "+sessionValue);
+		IVRUtils.logAppLogAndLog4j(name, "sessionName", sessionName, actionData);
+		IVRUtils.logAppLogAndLog4j(name, "sessionValue", sessionValue, actionData);
+		
+		IVRUtils.setSessionDataAndLogAppLogAndLog4j(actionData, sessionName, sessionValue);
 		
 		
 		}

@@ -22,7 +22,7 @@ public class SetTransferVDN extends ActionElementBase implements ElementInterfac
 			
 			String vdn = (String) config.getSettingValue(IVRConstants.transferType, actionData);
 			
-			logger.debug("Name: "+vdn);
+			IVRUtils.logAppLogAndLog4j(name, "VDNFor", vdn, actionData);
 			
 			Properties prop = (Properties) actionData.getSessionData(IVRConstants.applicationProperties);
 			

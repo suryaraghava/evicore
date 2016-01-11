@@ -36,6 +36,7 @@ public class CheckConfidenceLevel extends DecisionElementBase implements Element
 		catch(Exception e){
 			logger.error("Exception",e);
 		}
+		IVRUtils.logAppLogAndLog4j(name, "StatusFlag", statusFlag, decisionData);
 		return statusFlag;
 	}
 	
