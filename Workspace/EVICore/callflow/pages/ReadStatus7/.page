@@ -12,65 +12,69 @@
 </element>
 <element height="46" id="Element@3283510:1452318336946" name="EviCore_ReadStatus7_Dec_NumOptCodes" type="Decision" width="269" x="257" y="264">
 <exit_states>
-<exit_state name="Yes" target="Element@15210765:1452318449081"/>
+<exit_state name="Yes" target="Element@1505617:1452318475802"/>
 <exit_state name="No" target="Element@18928852:1452318388520"/>
 </exit_states>
 </element>
-<element height="46" id="Element@18928852:1452318388520" name="ReadStatus8" type="Page Connector" width="114" x="670" y="264">
+<element height="46" id="Element@18928852:1452318388520" name="ReadStatus8" type="Page Connector" width="114" x="690" y="264">
 <page_connector target="Element@17968650:1451650366559">ReadStatus8<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@15210765:1452318449081" name="EviCore_ReadStatus7_Check_NumCodes" src="com.evi.main.elements.IsEqual" type="Decision Element" width="262" x="262" y="379">
+<element height="46" id="Element@1505617:1452318475802" name="EviCore_ReadStatus7_Audio_Reason1" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="245" x="277" y="333">
 <exit_states>
-<exit_state name="equal" target="Element@1505617:1452318475802"/>
-<exit_state name="notequal" target="Element@10889414:1452318485042"/>
-<exit_state name="error" target="Element@3720250:1452335040134"/>
+<exit_state name="done" target="Element@4501346:1452831440707"/>
 </exit_states>
 </element>
-<element height="46" id="Element@1505617:1452318475802" name="EviCore_ReadStatus7_Audio_Reason1" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="245" x="289" y="600">
-<exit_states>
-<exit_state name="done" target="Element@23521572:1452318549621"/>
-</exit_states>
-</element>
-<element height="46" id="Element@10889414:1452318485042" name="EviCore_ReadStatus7_Audio_Reason" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="239" x="608" y="373">
+<element height="46" id="Element@10889414:1452318485042" name="EviCore_ReadStatus7_Audio_Reason" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="239" x="624" y="395">
 <exit_states>
 <exit_state name="done" target="Element@18928852:1452318388520"/>
 </exit_states>
 </element>
-<element height="46" id="Element@23521572:1452318549621" name="EviCore_ReadStatus7_Check_CptCodes" src="com.evi.main.elements.DecisionWith2Exits" type="Decision Element" width="254" x="291" y="697">
-<exit_states>
-<exit_state name="comparevalue1" target="Element@28090009:1452335010743">
-<bendpoint>
-<dim1 x="-170" y="129"/>
-<dim2 x="-181" y="-90"/>
-</bendpoint>
-</exit_state>
-<exit_state name="comparevalue2" target="Element@1505617:1452318475802">
-<bendpoint>
-<dim1 x="138" y="-56"/>
-<dim2 x="145" y="41"/>
-</bendpoint>
-</exit_state>
-<exit_state name="novalue" target="Element@27366668:1452318610348"/>
-<exit_state name="error" target="Element@3720250:1452335040134"/>
-</exit_states>
-</element>
-<element height="46" id="Element@27366668:1452318610348" name="Transfer" type="Page Connector" width="93" x="374" y="810">
+<element height="46" id="Element@27366668:1452318610348" name="Transfer" type="Page Connector" width="93" x="682" y="498">
 <page_connector target="Element@20132617:1451650491260">Transfer<config/>
 </page_connector>
 </element>
-<element height="46" id="Element@28090009:1452335010743" name="ReadStatus8" type="Page Connector" width="114" x="365" y="899">
+<element height="46" id="Element@28090009:1452335010743" name="ReadStatus8" type="Page Connector" width="114" x="360" y="878">
 <page_connector target="Element@17968650:1451650366559">ReadStatus8<config/>
 </page_connector>
 </element>
 <element height="46" id="Element@3720250:1452335040134" name="EviCore_ReadStatus7_VDN_NumCodes" src="com.evi.main.elements.SetTransferVDN" type="Action Element" width="253" x="271" y="498">
 <exit_states>
-<exit_state name="done" target="Element@27366668:1452318610348">
+<exit_state name="done" target="Element@27366668:1452318610348"/>
+</exit_states>
+</element>
+<element height="46" id="Element@4501346:1452831440707" name="EviCore_ReadStatus7_Get_OptCodes1" src="com.evi.main.elements.GetCPTCodes" type="Decision Element" width="246" x="275" y="403">
+<exit_states>
+<exit_state name="hasNoMoreCPTCodes" target="Element@10889414:1452318485042"/>
+<exit_state name="error" target="Element@3720250:1452335040134"/>
+<exit_state name="hasMoreCPTCodes" target="Element@25936641:1452831549770"/>
+</exit_states>
+</element>
+<element height="46" id="Element@25936641:1452831549770" name="EviCore_ReadStatus7_Audio_OptCodes" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="254" x="286" y="584">
+<exit_states>
+<exit_state name="done" target="Element@3111407:1452831717827"/>
+</exit_states>
+</element>
+<element height="46" id="Element@27941445:1452831584772" name="EviCore_ReadStatus7_Get_OptCodes" src="com.evi.main.elements.GetCPTCodes" type="Decision Element" width="240" x="294" y="764">
+<exit_states>
+<exit_state name="hasNoMoreCPTCodes" target="Element@28090009:1452335010743"/>
+<exit_state name="error" target="Element@3720250:1452335040134">
 <bendpoint>
-<dim1 x="261" y="140"/>
-<dim2 x="232" y="-181"/>
+<dim1 x="-138" y="-219"/>
+<dim2 x="-121" y="47"/>
 </bendpoint>
 </exit_state>
+<exit_state name="hasMoreCPTCodes" target="Element@25936641:1452831549770">
+<bendpoint>
+<dim1 x="167" y="-84"/>
+<dim2 x="168" y="96"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@3111407:1452831717827" name="EviCore_ReadStatus3_Count_OptCodes1" src="com.audium.server.action.counter.CounterAction" type="Action Element" width="261" x="281" y="679">
+<exit_states>
+<exit_state name="done" target="Element@27941445:1452831584772"/>
 </exit_states>
 </element>
 </page>

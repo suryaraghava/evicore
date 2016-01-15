@@ -12,7 +12,7 @@
 <audio_item name="NumOptCodesApproved" type="say_it_smart">
 <audio_item_notes/>
 <audio_item_config view_id="default">
-<say_it_smart input_format="standard" output_format="standard" type="number">NumOptCodesApproved</say_it_smart>
+<say_it_smart input_format="standard" output_format="standard" type="number">{Data.Session.NumOptCodes}</say_it_smart>
 <recorded_audio default_audio_path="true" fileset="standard" type="wav"/>
 </audio_item_config>
 </audio_item>
@@ -24,5 +24,8 @@
 </audio_item>
 </audio_group>
 </audio>
+<session_data>
+<data create_when="After" name="Count">0</data>
+</session_data>
 </config>
 </voice_element>

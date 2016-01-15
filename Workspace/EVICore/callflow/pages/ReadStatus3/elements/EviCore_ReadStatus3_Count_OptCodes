@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@27025557:1452831010380" name="EviCore_ReadStatus3_Count_OptCodes" version="6.0.1">
+<config>
+<settings>
+<setting name="initial">{Data.Session.Count}</setting>
+<setting name="type">increment</setting>
+<setting name="step">1</setting>
+</settings>
+</config>
+</action_element>

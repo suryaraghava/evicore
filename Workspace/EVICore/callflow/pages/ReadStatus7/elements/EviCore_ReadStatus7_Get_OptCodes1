@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@4501346:1452831440707" name="EviCore_ReadStatus7_Get_OptCodes1" version="6.0.1">
+<config>
+<settings>
+<setting name="currentCount">{Data.Session.Count1}</setting>
+</settings>
+</config>
+</decision_element>

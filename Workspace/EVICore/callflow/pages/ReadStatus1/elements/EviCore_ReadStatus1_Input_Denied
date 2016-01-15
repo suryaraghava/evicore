@@ -6,8 +6,8 @@
 <setting name="MaxErrors">1</setting>
 <setting name="confidence"/>
 <setting name="grammarSlot"/>
-<setting name="dtmfGrammar"/>
-<setting name="speechGrammar"/>
+<setting name="dtmfGrammar">{Data.Session.grammarpath}/yesorno_dtmf.grxml</setting>
+<setting name="speechGrammar">yesorn{Data.Session.grammarpath}/o.grxml</setting>
 </settings>
 <audio>
 <audio_group barge_in="true" count="1" name="Both">

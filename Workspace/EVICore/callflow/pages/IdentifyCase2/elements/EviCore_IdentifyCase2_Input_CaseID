@@ -5,11 +5,11 @@
 <setting name="inputType">both</setting>
 <setting name="MaxErrors">3</setting>
 <setting name="confidence"/>
-<setting name="grammarSlot"/>
-<setting name="dtmfGrammar">authorizationnumber_dtmf.grxml</setting>
-<setting name="dtmfGrammar">digit.grxml</setting>
-<setting name="speechGrammar">authorizationnumber.grxml</setting>
-<setting name="speechGrammar">digit.grxml</setting>
+<setting name="grammarSlot">out</setting>
+<setting name="dtmfGrammar">{Data.Session.grammarpath}/authorizationnumber_dtmf.grxml</setting>
+<setting name="dtmfGrammar">{Data.Session.grammarpath}/digit.grxml</setting>
+<setting name="speechGrammar">{Data.Session.grammarpath}/authorizationnumber.grxml</setting>
+<setting name="speechGrammar">{Data.Session.grammarpath}/digit.grxml</setting>
 </settings>
 <audio>
 <audio_group barge_in="true" count="1" name="Both">

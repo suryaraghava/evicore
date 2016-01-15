@@ -6,12 +6,12 @@
 <setting name="MaxErrors">3</setting>
 <setting name="confidence"/>
 <setting name="grammarSlot">out</setting>
-<setting name="dtmfGrammar">yesno_dtmf.grxml</setting>
-<setting name="dtmfGrammar">mainmenu_dtmf.grxml</setting>
-<setting name="dtmfGrammar">agent_dtmf.grxml</setting>
-<setting name="speechGrammar">yesno.grxml</setting>
-<setting name="speechGrammar">mainmenu.grxml</setting>
-<setting name="speechGrammar">agent.grxml</setting>
+<setting name="dtmfGrammar">{Data.Session.grammarpath}/yesno_dtmf.grxml</setting>
+<setting name="dtmfGrammar">{Data.Session.grammarpath}/mainmenu_dtmf.grxml</setting>
+<setting name="dtmfGrammar">{Data.Session.grammarpath}/agent_dtmf.grxml</setting>
+<setting name="speechGrammar">{Data.Session.grammarpath}/yesno.grxml</setting>
+<setting name="speechGrammar">{Data.Session.grammarpath}/mainmenu.grxml</setting>
+<setting name="speechGrammar">{Data.Session.grammarpath}/agent.grxml</setting>
 </settings>
 <audio>
 <audio_group barge_in="true" count="1" name="Both">

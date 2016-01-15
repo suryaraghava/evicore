@@ -6,14 +6,14 @@
 <setting name="MaxErrors">3</setting>
 <setting name="confidence"/>
 <setting name="grammarSlot">out</setting>
-<setting name="dtmfGrammar">postapproval_dtmf.grxml</setting>
-<setting name="dtmfGrammar">survey_dtmf.grxml</setting>
-<setting name="dtmfGrammar">mainmenu_dtmf.grxml</setting>
-<setting name="dtmfGrammar">gent_dtmf.grxml</setting>
-<setting name="speechGrammar">postapproval.grxml</setting>
-<setting name="speechGrammar">survey.grxml</setting>
-<setting name="speechGrammar">mainmenu.grxml</setting>
-<setting name="speechGrammar">agent.grxml</setting>
+<setting name="dtmfGrammar">{Data.Session.grammarpath}/postapproval_dtmf.grxml</setting>
+<setting name="dtmfGrammar">{Data.Session.grammarpath}/survey_dtmf.grxml</setting>
+<setting name="dtmfGrammar">{Data.Session.grammarpath}/mainmenu_dtmf.grxml</setting>
+<setting name="dtmfGrammar">{Data.Session.grammarpath}/gent_dtmf.grxml</setting>
+<setting name="speechGrammar">{Data.Session.grammarpath}/postapproval.grxml</setting>
+<setting name="speechGrammar">{Data.Session.grammarpath}/survey.grxml</setting>
+<setting name="speechGrammar">{Data.Session.grammarpath}/mainmenu.grxml</setting>
+<setting name="speechGrammar">{Data.Session.grammarpath}/agent.grxml</setting>
 </settings>
 <audio>
 <audio_group barge_in="true" count="1" name="Both">

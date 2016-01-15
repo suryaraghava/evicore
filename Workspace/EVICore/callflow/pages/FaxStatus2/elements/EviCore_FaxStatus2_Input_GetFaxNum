@@ -6,8 +6,8 @@
 <setting name="MaxErrors">3</setting>
 <setting name="confidence"/>
 <setting name="grammarSlot">out</setting>
-<setting name="dtmfGrammar">digits_dtmf.grxml</setting>
-<setting name="speechGrammar">digits.grxml</setting>
+<setting name="dtmfGrammar">{Data.Session.grammarpath}/digits_dtmf.grxml</setting>
+<setting name="speechGrammar">{Data.Session.grammarpath}/digits.grxml</setting>
 </settings>
 <audio>
 <audio_group barge_in="true" count="1" name="Both">

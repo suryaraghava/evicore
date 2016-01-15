@@ -1,6 +1,9 @@
 package com.evi.main.elements;
 
+import java.util.List;
 import java.util.Properties;
+
+import org.w3c.dom.Document;
 
 import com.audium.server.session.DecisionElementData;
 import com.audium.server.voiceElement.DecisionElementBase;
@@ -10,6 +13,9 @@ import com.audium.server.voiceElement.ExitState;
 import com.audium.server.voiceElement.Setting;
 import com.audium.server.xml.DecisionElementConfig;
 import com.evi.main.common.IVRConstants;
+import com.evi.main.java.CptCodesBean;
+import com.evi.main.java.LoadCaseBean;
+import com.evi.main.java.ReadLoadCaseDocument;
 import com.evi.main.utils.IVRUtils;
 
 public class LookupCase extends DecisionElementBase implements ElementInterface{
@@ -33,8 +39,12 @@ public class LookupCase extends DecisionElementBase implements ElementInterface{
 		 String ExpDate = null;
 		 String FaxNum = null;
 		 String NumOptCodes =null;
-		 String OptCodes =null;
+		 List<CptCodesBean> OptCodes =null;
+		 
+		 Document doc = null;
 		
+		 String caseId = IVRUtils.getSessionDataString(decisionData, IVRConstants.caseID);
+		 
 		if("test".equalsIgnoreCase(applicationmode)){
 			Properties appProperties = (Properties) decisionData.getSessionData(IVRConstants.applicationProperties);
 			StatusCode = IVRUtils.getPropertyValue(appProperties, IVRConstants.StatusCode);
@@ -46,11 +56,30 @@ public class LookupCase extends DecisionElementBase implements ElementInterface{
 			ExpDate = IVRUtils.getPropertyValue(appProperties, IVRConstants.ExpDate);
 			FaxNum = IVRUtils.getPropertyValue(appProperties, IVRConstants.FaxNum);
 			NumOptCodes = IVRUtils.getPropertyValue(appProperties, IVRConstants.NumOptCodes);
-			OptCodes = IVRUtils.getPropertyValue(appProperties, IVRConstants.OptCodes);
+			//OptCodes = IVRUtils.getPropertyValue(appProperties, IVRConstants.OptCodes);
+		}
+		else{
+		if("stub".equalsIgnoreCase(applicationmode)){
+			doc = IVRUtils.getDocument(caseId+"_res.xml");
 		}
 		else{
 			
 		}
+		ReadLoadCaseDocument rLCD = new ReadLoadCaseDocument();
+		LoadCaseBean lCB = rLCD.getLookupCaseBean(doc);
+		
+		StatusCode = lCB.getStatusCode();
+		AuthNum = lCB.getAuthNum();
+		PatientName = lCB.getPatientName();
+		PhysName = lCB.getPhysName();
+		FacilityName = lCB.getFacilityName();
+		EffDate = lCB.getEffDate();
+		ExpDate = lCB.getExpDate();
+		FaxNum = lCB.getFaxNum();
+		NumOptCodes = lCB.getNumOptCodes();
+		OptCodes = lCB.getOptCodes();
+		}
+		
 		
 		IVRUtils.setSessionDataAndLogAppLogAndLog4j(decisionData, IVRConstants.StatusCode, StatusCode);
 		IVRUtils.setSessionDataAndLogAppLogAndLog4j(decisionData, IVRConstants.AuthNum, AuthNum);
@@ -61,7 +90,9 @@ public class LookupCase extends DecisionElementBase implements ElementInterface{
 		IVRUtils.setSessionDataAndLogAppLogAndLog4j(decisionData, IVRConstants.ExpDate, ExpDate);
 		IVRUtils.setSessionDataAndLogAppLogAndLog4j(decisionData, IVRConstants.FaxNum, FaxNum);
 		IVRUtils.setSessionDataAndLogAppLogAndLog4j(decisionData, IVRConstants.NumOptCodes, NumOptCodes);
-		IVRUtils.setSessionDataAndLogAppLogAndLog4j(decisionData, IVRConstants.OptCodes, OptCodes);
+		IVRUtils.setSessionDataAndLogAppLogAndLog4jList(decisionData, IVRConstants.OptCodes, OptCodes);
+		
+		IVRUtils.setSessionDataAndLogAppLogAndLog4j(decisionData, IVRConstants.CaseNumberValid, "Yes");
 		
 		}
 		catch(Exception e){

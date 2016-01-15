@@ -12,19 +12,12 @@ import java.io.InputStream;
 import java.io.StringReader;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
-import javax.sql.DataSource;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.xpath.XPath;
@@ -43,6 +36,7 @@ import com.audium.server.session.APIBase;
 import com.audium.server.session.DecisionElementData;
 import com.audium.server.session.ElementAPI;
 import com.evi.main.common.IVRConstants;
+import com.evi.main.java.CptCodesBean;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -159,6 +153,15 @@ public class IVRUtils {
     		} else {
     			logAppLogAndLog4j("", key, "Null or Empty", data);
     		}
+    	} catch(Exception ex){
+    		logger.error(ex);
+    	}
+    }
+    
+    public static void setSessionDataAndLogAppLogAndLog4jList(APIBase data, String key, List<CptCodesBean> value){
+    	try {
+		    	data.setSessionData(key, value);
+    		
     	} catch(Exception ex){
     		logger.error(ex);
     	}

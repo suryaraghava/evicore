@@ -6,16 +6,19 @@
 <audio_item name="audio item 1" type="static">
 <audio_item_notes/>
 <audio_item_config view_id="default">
-<static default_audio_path="true" uri=""><![CDATA[There were <NumOptCodesDeclined> medical determinations made.]]></static>
+<static default_audio_path="true" uri=""><![CDATA[There were {Data.Session.NumOptCodes} medical determinations made.]]></static>
 </audio_item_config>
 </audio_item>
 <audio_item name="audio item 2" type="static">
 <audio_item_notes/>
 <audio_item_config view_id="default">
-<static default_audio_path="true" uri=""><![CDATA[Reason <CPTCtr>, <OptCodes.DenialReason]]></static>
+<static default_audio_path="true" uri=""><![CDATA[Reason {Data.Session.optCodeDesc}]]></static>
 </audio_item_config>
 </audio_item>
 </audio_group>
 </audio>
+<session_data>
+<data create_when="Before" name="Count1">0</data>
+</session_data>
 </config>
 </voice_element>

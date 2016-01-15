@@ -55,7 +55,7 @@ public class CheckConfidenceLevel extends DecisionElementBase implements Element
 	public Setting[] getSettings() throws ElementException{
 		Setting[] settingArray = new Setting[1];
 		
-		settingArray[1] = new Setting(
+		settingArray[0] = new Setting(
 				IVRConstants.formConfidence,
 				IVRConstants.formConfidence,
 				IVRConstants.formConfidence,

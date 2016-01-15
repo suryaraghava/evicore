@@ -22,6 +22,7 @@ public class IVRConstants {
 	
 	public static String hostname = "HostName";
 	public static String audioPath = "audiopath";
+	public static String grammarPath = "grammarpath";
 	
 	public static String defaultMidConfidence = "midConfidence";
 	public static String formConfidence = "formConfidence";
@@ -65,5 +66,14 @@ public class IVRConstants {
 	public static String FaxNum = "FaxNum";
 	public static String NumOptCodes ="NumOptCodes";
 	public static String OptCodes ="OptCodes";
+	
+	public static String optCodeDesc = "optCodeDesc";
+	
+	public static String hasMoreCPTCodes = "hasMoreCPTCodes";
+	public static String hasNoMoreCPTCodes = "hasNoMoreCPTCodes";
+	
+	public static String currentCount = "currentCount";
+	
+	public static String CaseNumberValid = "CaseNumberValid";
 			
 }

@@ -5,9 +5,9 @@
 <setting name="inputType">both</setting>
 <setting name="MaxErrors">3</setting>
 <setting name="confidence"/>
-<setting name="grammarSlot"/>
-<setting name="dtmfGrammar">yesno_dtmf.grxml</setting>
-<setting name="speechGrammar">yesno.grxml</setting>
+<setting name="grammarSlot">out</setting>
+<setting name="dtmfGrammar">{Data.Session.grammarpath}/{Data.Session.grammarpath}/yesno_dtmf.grxml</setting>
+<setting name="speechGrammar">{Data.Session.grammarpath}/{Data.Session.grammarpath}/yesno.grxml</setting>
 </settings>
 <audio>
 <audio_group barge_in="true" count="1" name="Both">

@@ -40,6 +40,9 @@ public class OnCallStart implements StartCallInterface{
 			            String audioPath = IVRUtils.getPropertyValue(appProperties, IVRConstants.audioPath);
 			            IVRUtils.setSessionDataAndLogAppLogAndLog4j(callStart, IVRConstants.audioPath, audioPath);
 			            
+			            String grammarPath = IVRUtils.getPropertyValue(appProperties, IVRConstants.grammarPath);
+			            IVRUtils.setSessionDataAndLogAppLogAndLog4j(callStart, IVRConstants.grammarPath, grammarPath);
+			            
 			            String applicationMode = IVRUtils.getPropertyValue(appProperties, IVRConstants.applicationMode);
 			            IVRUtils.setSessionDataAndLogAppLogAndLog4j(callStart, IVRConstants.applicationMode, applicationMode);
 			            
